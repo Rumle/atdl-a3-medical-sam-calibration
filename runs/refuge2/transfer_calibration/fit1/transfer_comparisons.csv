@@ -1,0 +1,49 @@
+model,fit_click,target_click,method,comparison,difference,ci_low,ci_high,a_better,a_worse
+base_sam,1,1,constant,MAE corrected - native,-0.1929924587689607,-0.24967871307775372,-0.13610121705962522,True,False
+base_sam,1,1,constant,"GATE (beats native, and constant for linear/isotonic, at fit click)",,,,True,
+base_sam,1,1,linear,MAE corrected - native,-0.1969060463191826,-0.24921982250513355,-0.14414413470163204,True,False
+base_sam,1,1,linear,MAE corrected - constant,-0.003913587550221892,-0.015406833474492242,0.007719287009518818,False,False
+base_sam,1,1,linear,"GATE (beats native, and constant for linear/isotonic, at fit click)",,,,False,
+base_sam,1,1,isotonic,MAE corrected - native,-0.19662245769707115,-0.24622357286632737,-0.1462211130301961,True,False
+base_sam,1,1,isotonic,MAE corrected - constant,-0.003629998928110445,-0.018350973996381616,0.01104720627166976,False,False
+base_sam,1,1,isotonic,"GATE (beats native, and constant for linear/isotonic, at fit click)",,,,False,
+base_sam,1,2,constant,MAE corrected - native,-0.11227583640098343,-0.1756326819020556,-0.04933858719126431,True,False
+base_sam,1,2,constant,transfer gap: fit-click correction - own-click correction,-0.004038783958768971,-0.01729723801858967,0.00879541643481583,False,False
+base_sam,1,2,linear,MAE corrected - native,-0.11577057014811934,-0.17394851776617515,-0.058500048177864764,True,False
+base_sam,1,2,linear,MAE corrected - constant,-0.0034947337471359086,-0.015251344070053465,0.008862652317760103,False,False
+base_sam,1,2,linear,transfer gap: fit-click correction - own-click correction,0.00047995385437396565,-0.012322587129084895,0.01239430884838529,False,False
+base_sam,1,2,isotonic,MAE corrected - native,-0.11377904662959351,-0.17312909685912653,-0.05588544593928675,True,False
+base_sam,1,2,isotonic,MAE corrected - constant,-0.0015032102286100801,-0.017236887860191438,0.014278584531061664,False,False
+base_sam,1,2,isotonic,transfer gap: fit-click correction - own-click correction,0.005371283717234471,-0.01181514792559718,0.021082168721820258,False,False
+base_sam,1,3,constant,MAE corrected - native,-0.016582724482370526,-0.08676114869571866,0.05201463971483325,False,False
+base_sam,1,3,constant,transfer gap: fit-click correction - own-click correction,0.02229250631228963,0.0069758281569907345,0.03783887963429834,False,True
+base_sam,1,3,linear,MAE corrected - native,-0.008842046140942805,-0.07425970909640806,0.05437496237941762,False,False
+base_sam,1,3,linear,MAE corrected - constant,0.00774067834142772,-0.004660513825657291,0.019319002527336683,False,False
+base_sam,1,3,linear,transfer gap: fit-click correction - own-click correction,0.028065477292091634,0.01264800316348692,0.042156427738186245,False,True
+base_sam,1,3,isotonic,MAE corrected - native,-0.0016453416560995304,-0.07009250627785794,0.06452817253284977,False,False
+base_sam,1,3,isotonic,MAE corrected - constant,0.014937382826270995,-0.0019974194700628457,0.030941524451432695,False,False
+base_sam,1,3,isotonic,transfer gap: fit-click correction - own-click correction,0.03505712241522674,0.014204196149328507,0.054096183330176684,False,True
+med_sa_adapter,1,1,constant,MAE corrected - native,-0.011038498428624421,-0.04919717426809447,0.024607023328607938,False,False
+med_sa_adapter,1,1,constant,"GATE (beats native, and constant for linear/isotonic, at fit click)",,,,False,
+med_sa_adapter,1,1,linear,MAE corrected - native,-0.01339896329507792,-0.046588308469509426,0.017575315747869955,False,False
+med_sa_adapter,1,1,linear,MAE corrected - constant,-0.002360464866453499,-0.011655066890118332,0.007583424069209421,False,False
+med_sa_adapter,1,1,linear,"GATE (beats native, and constant for linear/isotonic, at fit click)",,,,False,
+med_sa_adapter,1,1,isotonic,MAE corrected - native,-0.022886087023852586,-0.057518103832618336,0.010673975629703741,False,False
+med_sa_adapter,1,1,isotonic,MAE corrected - constant,-0.011847588595228165,-0.029213114149251693,0.004616828904930215,False,False
+med_sa_adapter,1,1,isotonic,"GATE (beats native, and constant for linear/isotonic, at fit click)",,,,False,
+med_sa_adapter,1,2,constant,MAE corrected - native,0.07756585289137588,0.03660957725233107,0.11635355879463526,False,True
+med_sa_adapter,1,2,constant,transfer gap: fit-click correction - own-click correction,0.0615295343203581,0.031887158984762576,0.09024091758566218,False,True
+med_sa_adapter,1,2,linear,MAE corrected - native,0.05587395080672264,0.021018686470957112,0.08874635089731821,False,True
+med_sa_adapter,1,2,linear,MAE corrected - constant,-0.021691902084653242,-0.03132307571546906,-0.011316833791570153,True,False
+med_sa_adapter,1,2,linear,transfer gap: fit-click correction - own-click correction,0.056080685237200806,0.03143480825351297,0.07979655219794496,False,True
+med_sa_adapter,1,2,isotonic,MAE corrected - native,0.022451523455256,-0.007472298345304521,0.054428067684074884,False,False
+med_sa_adapter,1,2,isotonic,MAE corrected - constant,-0.05511432943611988,-0.08234160806031361,-0.02796612431334425,True,False
+med_sa_adapter,1,2,isotonic,transfer gap: fit-click correction - own-click correction,0.025655976692663368,0.0036967197205310174,0.048022927071989706,False,True
+med_sa_adapter,1,3,constant,MAE corrected - native,0.166256756456999,0.13278236097940213,0.19788410335702006,False,True
+med_sa_adapter,1,3,constant,transfer gap: fit-click correction - own-click correction,0.16155448020741042,0.1335097470949451,0.18862070214853588,False,True
+med_sa_adapter,1,3,linear,MAE corrected - native,0.1282984665331438,0.09925920965578623,0.15489437346462392,False,True
+med_sa_adapter,1,3,linear,MAE corrected - constant,-0.037958289923855165,-0.04694668031914674,-0.027865190966229938,True,False
+med_sa_adapter,1,3,linear,transfer gap: fit-click correction - own-click correction,0.1322165225219687,0.10534517798374032,0.15696187431409112,False,True
+med_sa_adapter,1,3,isotonic,MAE corrected - native,0.07139212557796644,0.046214402287834994,0.09936113720374837,False,True
+med_sa_adapter,1,3,isotonic,MAE corrected - constant,-0.09486463087903255,-0.12343688836045372,-0.06678733789043008,True,False
+med_sa_adapter,1,3,isotonic,transfer gap: fit-click correction - own-click correction,0.07214880951028041,0.049845930277408,0.09595150273124539,False,True

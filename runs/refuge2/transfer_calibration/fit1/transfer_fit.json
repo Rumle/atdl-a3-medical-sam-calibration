@@ -1,0 +1,100 @@
+{
+  "protocol": "fit at fit_click on calibration_fit -> freeze -> test on evaluation cases",
+  "fit_role": "calibration_fit",
+  "evaluation_role": "internal_evaluation_overlap_risk",
+  "fit_click": 1,
+  "target_clicks": [
+    1,
+    2,
+    3
+  ],
+  "bootstrap_replicates": 2000,
+  "seed": 1,
+  "fits": {
+    "base_sam": {
+      "constant": {
+        "mean_iou": 0.3723476243742364
+      },
+      "linear": {
+        "slope_a": 0.36565675621158145,
+        "intercept_b": 0.11083495613633243
+      },
+      "isotonic": {
+        "n_steps": 12
+      },
+      "fit_corr_score_iou": 0.2618664567977458,
+      "fit_cases": 200,
+      "own_click_2": {
+        "constant": {
+          "mean_iou": 0.4428104278387009
+        },
+        "linear": {
+          "slope_a": 0.21847310824324873,
+          "intercept_b": 0.2846814386890681
+        },
+        "isotonic": {
+          "n_steps": 12
+        },
+        "fit_corr_score_iou": 0.1492731427953043,
+        "fit_cases": 200
+      },
+      "own_click_3": {
+        "constant": {
+          "mean_iou": 0.4580062505696711
+        },
+        "linear": {
+          "slope_a": 0.1470656248365397,
+          "intercept_b": 0.3492388616231267
+        },
+        "isotonic": {
+          "n_steps": 12
+        },
+        "fit_corr_score_iou": 0.07614248279936743,
+        "fit_cases": 200
+      }
+    },
+    "med_sa_adapter": {
+      "constant": {
+        "mean_iou": 0.6039616216733167
+      },
+      "linear": {
+        "slope_a": 0.5273529997768784,
+        "intercept_b": 0.1890738518364984
+      },
+      "isotonic": {
+        "n_steps": 27
+      },
+      "fit_corr_score_iou": 0.22312046029055993,
+      "fit_cases": 200,
+      "own_click_2": {
+        "constant": {
+          "mean_iou": 0.7766029128442798
+        },
+        "linear": {
+          "slope_a": 0.6263611741802708,
+          "intercept_b": 0.25111615017202726
+        },
+        "isotonic": {
+          "n_steps": 21
+        },
+        "fit_corr_score_iou": 0.37540290727040804,
+        "fit_cases": 200
+      },
+      "own_click_3": {
+        "constant": {
+          "mean_iou": 0.8372234296516374
+        },
+        "linear": {
+          "slope_a": 0.6485239967582904,
+          "intercept_b": 0.28642269034774914
+        },
+        "isotonic": {
+          "n_steps": 22
+        },
+        "fit_corr_score_iou": 0.4455089208425646,
+        "fit_cases": 200
+      }
+    }
+  },
+  "note": "Evaluation cases carry the internal_evaluation_overlap_risk label; results are exploratory."
+}
