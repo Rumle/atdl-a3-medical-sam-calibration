@@ -6,6 +6,7 @@ Reads the saved shared results (no inference needed) and compares, per model,
 Both use the same calibration cases (same annotation budget). Extra controls:
   pooled_matched: pooled fit on one randomly drawn click count per case (200 pairs, R draws)
   pooled_13:      pooled fit on 1 and 3 clicks only (excludes 2 clicks)
+  shared_slope:   y_hat = clip(a q + b_k, 0, 1), one slope for all click counts, one intercept per k
   constant:       calibration-set mean IoU at click count k
 Validation cases are not used. Evaluation uses final_test when present, otherwise
 internal_evaluation_overlap_risk.
@@ -78,6 +79,10 @@ for m in MODELS:
     coefs = {("separate", k): fit_line(fit[k][1], fit[k][2]) for k in CLICKS}
     coefs["pooled"] = fit_line(np.concatenate([fit[k][1] for k in CLICKS]), np.concatenate([fit[k][2] for k in CLICKS]))
     coefs["pooled_13"] = fit_line(np.concatenate([fit[k][1] for k in (1, 3)]), np.concatenate([fit[k][2] for k in (1, 3)]))
+    design = np.column_stack([np.concatenate([fit[k][1] for k in CLICKS]),
+                              np.kron(np.eye(len(CLICKS)), np.ones((n_fit, 1)))])  # q and one dummy per click count
+    theta = np.linalg.lstsq(design, np.concatenate([fit[k][2] for k in CLICKS]), rcond=None)[0]
+    coefs.update({("shared_slope", k): (float(theta[0]), float(theta[1 + i])) for i, k in enumerate(CLICKS)})
     for key, (a, b) in coefs.items():
         name, k = key if isinstance(key, tuple) else (key, "all" if key == "pooled" else "1,3")
         coef_rows.append({"model": m, "method": name, "fit_click_count": k, "slope_a": a, "intercept_b": b, "fit_cases": n_fit})
@@ -91,6 +96,7 @@ for m in MODELS:
             "separate": line(coefs["separate", k]),
             "pooled": line(coefs["pooled"]),
             "pooled_13": line(coefs["pooled_13"]),
+            "shared_slope": line(coefs["shared_slope", k]),
         }
 
     # Budget-matched pooled fit: each calibration case contributes one random click count.
@@ -121,7 +127,7 @@ for m in MODELS:
             row["bias_ci_low"], row["bias_ci_high"] = np.quantile(boot_bias, [0.025, 0.975])
             row["mean_prediction"] = row.pop("mean_native_score")
             metric_rows.append(row)
-    comparisons = [("pooled", "separate"), ("pooled_13", "separate"), ("separate", "native"), ("pooled", "native")]
+    comparisons = [("pooled", "separate"), ("pooled_13", "separate"), ("shared_slope", "separate"), ("separate", "native"), ("pooled", "native")]
     for a_meth, b_meth in comparisons:
         for k in list(CLICKS) + ["mean"]:
             ks = CLICKS if k == "mean" else (k,)
@@ -146,10 +152,10 @@ write("budget_matched_pooled.csv", matched_rows)
 
 # LaTeX table: MAE (95% CI) and signed bias on evaluation cases.
 label = {"base_sam": "SAM", "med_sa_adapter": "Med-SA"}
-methods = ["native", "constant", "separate", "pooled"]
+methods = ["native", "separate", "pooled", "shared_slope"]
 get = {(r["model"], r["click_count"], r["method"]): r for r in metric_rows}
 lines = [r"\begin{tabular}{llcccc}", r"\toprule",
-         r"Model & $k$ & Native & Constant & Separate & Pooled \\", r"\midrule"]
+         r"Model & $k$ & Native & Separate & Pooled & Shared slope \\", r"\midrule"]
 for m in MODELS:
     for k in CLICKS:
         cells = [f"{get[m, k, meth]['mae']:.3f} ({get[m, k, meth]['bias']:+.3f})" for meth in methods]
@@ -159,26 +165,32 @@ for m in MODELS:
 lines += [r"\bottomrule", r"\end{tabular}"]
 (out_dir / "table_mae_bias.tex").write_text("\n".join(lines) + "\n")
 
-# Figure: evaluation MAE with 95% bootstrap CI per click count, one panel per model.
-colors = {"native": "#8a8a85", "constant": "#eda100", "separate": "#2a78d6", "pooled": "#eb6834"}
-markers = {"native": "s", "constant": "D", "separate": "o", "pooled": "^"}
-fig, axes = plt.subplots(1, 2, figsize=(7.2, 3.0), sharey=True)
-for ax, m in zip(axes, MODELS):
-    for i, meth in enumerate(methods):
-        x = np.array(CLICKS) + (i - 1.5) * 0.09
-        r = [get[m, k, meth] for k in CLICKS]
-        mae = np.array([v["mae"] for v in r])
-        err = np.array([[v["mae"] - v["mae_ci_low"] for v in r], [v["mae_ci_high"] - v["mae"] for v in r]])
-        ax.errorbar(x, mae, yerr=err, color=colors[meth], marker=markers[meth], markersize=6,
-                    linewidth=2, capsize=0, elinewidth=1.2, label=meth.capitalize())
-    ax.set_title(label[m])
-    ax.set_xticks(CLICKS)
-    ax.set_xlabel("Number of clicks $k$")
-    ax.grid(axis="y", alpha=0.25)
-    ax.spines[["top", "right"]].set_visible(False)
-axes[0].set_ylabel("MAE between score and IoU")
-axes[0].set_ylim(bottom=0)
-axes[1].legend(frameon=False, fontsize=8)
+# Figure: MAE and signed bias with 95% bootstrap CI per click count, one column per model.
+colors = {"native": "#8a8a85", "separate": "#2a78d6", "pooled": "#eb6834", "shared_slope": "#1baf7a"}
+markers = {"native": "s", "separate": "o", "pooled": "^", "shared_slope": "D"}
+names = {"native": "Native", "separate": "Separate", "pooled": "Pooled", "shared_slope": "Shared slope"}
+fig, axes = plt.subplots(2, 2, figsize=(7.2, 5.0), sharex=True, sharey="row")
+for col, m in enumerate(MODELS):
+    for row, stat in enumerate(("mae", "bias")):
+        ax = axes[row, col]
+        for i, meth in enumerate(methods):
+            x = np.array(CLICKS) + (i - 1.5) * 0.09
+            r = [get[m, k, meth] for k in CLICKS]
+            val = np.array([v[stat] for v in r])
+            err = np.array([[v[stat] - v[f"{stat}_ci_low"] for v in r], [v[f"{stat}_ci_high"] - v[stat] for v in r]])
+            ax.errorbar(x, val, yerr=err, color=colors[meth], marker=markers[meth], markersize=6,
+                        linewidth=2, capsize=0, elinewidth=1.2, label=names[meth])
+        ax.grid(axis="y", alpha=0.25)
+        ax.spines[["top", "right"]].set_visible(False)
+        if stat == "bias":
+            ax.axhline(0, color="black", linewidth=0.8)
+            ax.set_xlabel("Number of clicks $k$")
+    axes[0, col].set_title(label[m])
+axes[1, 0].set_xticks(CLICKS)
+axes[0, 0].set_ylabel("MAE")
+axes[0, 0].set_ylim(bottom=0)
+axes[1, 0].set_ylabel("Signed bias (score $-$ IoU)")
+axes[0, 1].legend(frameon=False, fontsize=8)
 fig.tight_layout()
 fig.savefig(out_dir / "mae_by_click.png", dpi=300)
 fig.savefig(out_dir / "mae_by_click.pdf")
