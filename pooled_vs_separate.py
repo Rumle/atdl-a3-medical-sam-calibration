@@ -3,11 +3,12 @@
 Reads the saved shared results (no inference needed) and compares, per model,
   separate: y_hat = clip(a_k q + b_k, 0, 1), fitted on calibration_fit cases at click count k
   pooled:   y_hat = clip(a q + b, 0, 1),     fitted on calibration_fit cases at all click counts
-Both use the same 200 calibration cases (same annotation budget). Extra controls:
+Both use the same calibration cases (same annotation budget). Extra controls:
   pooled_matched: pooled fit on one randomly drawn click count per case (200 pairs, R draws)
-  pooled_13:      pooled fit on 1 and 3 clicks only (2 clicks is held out)
+  pooled_13:      pooled fit on 1 and 3 clicks only (excludes 2 clicks)
   constant:       calibration-set mean IoU at click count k
-Validation cases are not used. Everything is evaluated on internal_evaluation_overlap_risk.
+Validation cases are not used. Evaluation uses final_test when present, otherwise
+internal_evaluation_overlap_risk.
 """
 
 import argparse
@@ -19,21 +20,29 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from experiment_protocol import PROTOCOL
+from bootstrap import bootstrap_indices, bootstrap_unit, dataset_id_from_rows
+from member4_analysis import evaluation_role
 from native_reliability import regression_metrics
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--dataset-id", default="refuge2")
+parser.add_argument("--run-dir", type=Path)
 parser.add_argument("--matched-draws", type=int, default=200)
 args = parser.parse_args()
 
-run_dir = Path("runs") / args.dataset_id
+script_dir = Path(__file__).resolve().parent
+run_dir = args.run_dir if args.run_dir else script_dir / "runs" / args.dataset_id
 out_dir = run_dir / "pooled_vs_separate"
 out_dir.mkdir(parents=True, exist_ok=True)
 MODELS, CLICKS = PROTOCOL.models, PROTOCOL.click_counts
-FIT, EVAL = "calibration_fit", "internal_evaluation_overlap_risk"
+FIT = "calibration_fit"
 B, SEED = PROTOCOL.bootstrap_replicates, PROTOCOL.bootstrap_seed
 
-rows = list(csv.DictReader(open(run_dir / "shared_case_results.csv")))
+with (run_dir / "shared_case_results.csv").open(newline="") as f:
+    rows = list(csv.DictReader(f))
+EVAL = evaluation_role(rows)
+dataset_id = dataset_id_from_rows(rows)
+
 # data[model][role][k] = (case_ids, q, y), sorted by case_id so cases align across k
 data = {}
 for m in MODELS:
@@ -43,6 +52,10 @@ for m in MODELS:
                 (r for r in rows if r["model"] == m and r["analysis_role"] == role and int(r["click_count"]) == k),
                 key=lambda r: r["case_id"],
             )
+            if not sel:
+                if role == FIT:
+                    raise ValueError(f"No calibration_fit cases for {m}, click count {k}")
+                raise ValueError(f"No evaluation cases for {m}, click count {k}, {role}")
             data.setdefault(m, {}).setdefault(role, {})[k] = (
                 [r["case_id"] for r in sel],
                 np.array([float(r["native_score"]) for r in sel]),
@@ -95,15 +108,15 @@ for m in MODELS:
                              "mae_p2.5": np.quantile(d, 0.025), "mae_p97.5": np.quantile(d, 0.975),
                              "mae_full_pooled": np.abs(preds[m, k]["pooled"] - ev[k][2]).mean()})
 
-    # Case bootstrap on evaluation cases; same resampled cases for every method and click count.
+    # Reuse the same patient/case draws for all paired comparisons.
     n_ev = len(ev[CLICKS[0]][0])
-    idx = np.random.default_rng(SEED).integers(0, n_ev, (B, n_ev))
+    idx = list(bootstrap_indices(ev[CLICKS[0]][0], dataset_id, B, SEED))
     abs_err = {(k, meth): np.abs(p - ev[k][2]) for k in CLICKS for meth, p in preds[m, k].items()}
     for k in CLICKS:
         for meth, p in preds[m, k].items():
             row = {"model": m, "click_count": k, "method": meth, "evaluation_cases": n_ev, **regression_metrics(p, ev[k][2])}
-            boot_mae = abs_err[k, meth][idx].mean(1)
-            boot_bias = (p - ev[k][2])[idx].mean(1)
+            boot_mae = [abs_err[k, meth][indices].mean() for indices in idx]
+            boot_bias = [(p - ev[k][2])[indices].mean() for indices in idx]
             row["mae_ci_low"], row["mae_ci_high"] = np.quantile(boot_mae, [0.025, 0.975])
             row["bias_ci_low"], row["bias_ci_high"] = np.quantile(boot_bias, [0.025, 0.975])
             row["mean_prediction"] = row.pop("mean_native_score")
@@ -113,7 +126,7 @@ for m in MODELS:
         for k in list(CLICKS) + ["mean"]:
             ks = CLICKS if k == "mean" else (k,)
             diff = np.mean([abs_err[j, a_meth] - abs_err[j, b_meth] for j in ks], axis=0)  # per-case MAE difference
-            boot = diff[idx].mean(1)
+            boot = np.array([diff[indices].mean() for indices in idx])
             diff_rows.append({"model": m, "click_count": k, "comparison": f"{a_meth} - {b_meth}",
                               "mae_difference": diff.mean(), "ci_low": np.quantile(boot, 0.025),
                               "ci_high": np.quantile(boot, 0.975), "p_boot_le_0": float((boot <= 0).mean())})
@@ -171,6 +184,7 @@ fig.savefig(out_dir / "mae_by_click.png", dpi=300)
 fig.savefig(out_dir / "mae_by_click.pdf")
 
 json.dump({"dataset_id": args.dataset_id, "fit_role": FIT, "evaluation_role": EVAL,
+           "bootstrap_unit": bootstrap_unit(dataset_id),
            "bootstrap_replicates": B, "bootstrap_seed": SEED, "matched_draws": args.matched_draws,
            "coefficients": coef_rows, "paired_differences": diff_rows},
           open(out_dir / "summary.json", "w"), indent=2, default=float)

@@ -24,6 +24,9 @@ class DatasetProtocol:
     adapter_exposure_status: str
     adapter_exposure_evidence: str
     pools: tuple[DatasetPoolProtocol, ...]
+    ground_truth_rule: str
+    downloads: tuple[tuple[str, str], ...]
+    split_by_patient: bool = False
 
     def as_dict(self) -> dict[str, object]:
         return asdict(self)
@@ -63,33 +66,88 @@ DATASET_PROTOCOLS = {
                 ),
             ),
         ),
+        ground_truth_rule=(
+            "Use the seven rater masks. A pixel belongs to the optic disc "
+            "when at least four raters include it."
+        ),
+        downloads=(
+            (
+                "REFUGE-Multirater.zip",
+                "https://huggingface.co/datasets/realslimman/REFUGE-MultiRater/"
+                "resolve/main/REFUGE-Multirater.zip",
+            ),
+        ),
     ),
-    "drishti_gs1": DatasetProtocol(
-        dataset_id="drishti_gs1",
-        display_name="Drishti-GS1",
+    "papila": DatasetProtocol(
+        dataset_id="papila",
+        display_name="PAPILA",
         target="optic_disc",
-        source="Official Drishti-GS1 dataset",
-        runtime_status="not_available_in_repository",
+        source="https://figshare.com/articles/dataset/PAPILA/14798004",
+        runtime_status="download_on_startup",
         adapter_exposure_status="unknown",
         adapter_exposure_evidence=(
-            "Drishti-GS1 was not listed among the Med-SA benchmark datasets we "
-            "checked. We do not have the exact checkpoint case history, so we "
-            "cannot confirm that these cases are independent."
+            "Checkpoint case history is unavailable. Independence from "
+            "checkpoint development cannot be confirmed."
         ),
         pools=(
             DatasetPoolProtocol(
-                pool_id="training_50",
-                official_name="Training-50",
-                expected_cases=50,
+                pool_id="all_488",
+                official_name="PAPILA 488 eyes, split by patient",
+                expected_cases=488,
                 annotation_access="available",
-                role_fractions=(("calibration_fit", 0.6), ("validation", 0.4)),
+                role_fractions=(
+                    ("calibration_fit", 0.5),
+                    ("validation", 0.25),
+                    ("final_test", 0.25),
+                ),
+            ),
+        ),
+        ground_truth_rule=(
+            "Fill expert 1's optic-disc outline to make a mask "
+            "at the original image size."
+        ),
+        downloads=(("PAPILA.zip", "https://ndownloader.figshare.com/files/35013982"),),
+        split_by_patient=True,
+    ),
+    "rim_one_dl": DatasetProtocol(
+        dataset_id="rim_one_dl",
+        display_name="RIM-ONE DL",
+        target="optic_disc",
+        source="https://github.com/miag-ull/rim-one-dl",
+        runtime_status="download_on_startup",
+        adapter_exposure_status="unknown",
+        adapter_exposure_evidence=(
+            "Checkpoint case history is unavailable. Independence from "
+            "checkpoint development cannot be confirmed."
+        ),
+        pools=(
+            DatasetPoolProtocol(
+                pool_id="training_339",
+                official_name="Official random partition training set",
+                expected_cases=339,
+                annotation_access="available",
+                role_fractions=(("calibration_fit", 0.75), ("validation", 0.25)),
             ),
             DatasetPoolProtocol(
-                pool_id="test_51",
-                official_name="Test-51",
-                expected_cases=51,
-                annotation_access="registration_required",
+                pool_id="test_146",
+                official_name="Official random partition test set",
+                expected_cases=146,
+                annotation_access="available",
                 role_fractions=(("final_test", 1.0),),
+            ),
+        ),
+        ground_truth_rule=(
+            "Use the supplied optic-disc mask. Every nonzero pixel "
+            "belongs to the disc."
+        ),
+        downloads=(
+            (
+                "RIM-ONE-images.zip",
+                "https://drive.google.com/uc?id=1teYi_smpLiNZNJcTWdxXgKKLW2fkUQr4",
+            ),
+            (
+                "RIM-ONE-masks.zip",
+                "https://drive.google.com/uc?id=1eb1V9V65TuwFNYmYsIzgdAgdWyD6o7bG",
             ),
         ),
     ),
@@ -107,11 +165,6 @@ class ExperimentProtocol:
     models: tuple[str, ...] = ("base_sam", "med_sa_adapter")
     click_counts: tuple[int, ...] = (1, 2, 3)
     image_size: int = 1024
-    dataset_url: str = (
-        "https://huggingface.co/datasets/realslimman/REFUGE-MultiRater/resolve/main/"
-        "REFUGE-Multirater.zip"
-    )
-    dataset_archive_name: str = "REFUGE-Multirater.zip"
     base_checkpoint_name: str = "sam_vit_b_01ec64.pth"
     base_checkpoint_url: str = (
         "https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth"
@@ -126,10 +179,6 @@ class ExperimentProtocol:
     adapter_checkpoint_name: str = "OpticDisc_Fundus_SAM_1024.pth"
     adapter_checkpoint_sha256: str = (
         "a1e39b25aa17e71fe18a6776bd771fc862b7d28c7562e574646473effdff1af1"
-    )
-    ground_truth_rule: str = (
-        "Pixelwise majority vote from seven raters. Mark a pixel as foreground "
-        "when at least four raters do."
     )
     prompt_rule: str = (
         "Choose positive clicks from the consensus mask. The first click is the "
@@ -149,6 +198,17 @@ class ExperimentProtocol:
 
 
 PROTOCOL = ExperimentProtocol()
+
+
+def _case_groups(case_ids: list[str], split_by_patient: bool) -> dict[str, list[str]]:
+    # Both PAPILA eyes of a patient must stay in the same role.
+    groups = {}
+    for case_id in sorted(case_ids):
+        if split_by_patient and not case_id.endswith(("OD", "OS")):
+            raise ValueError(f"Patient-grouped eye ID must end in OD or OS: {case_id}")
+        group_id = case_id[:-2] if split_by_patient else case_id
+        groups.setdefault(group_id, []).append(case_id)
+    return groups
 
 
 def assign_case_roles(
@@ -194,9 +254,10 @@ def assign_case_roles(
                 f"{pool.official_name} needs at least one case per declared role."
             )
 
-        exact_sizes = fractions * len(case_ids)
+        groups = _case_groups(case_ids, dataset.split_by_patient)
+        exact_sizes = fractions * len(groups)
         sizes = np.floor(exact_sizes).astype(int)
-        remainder = len(case_ids) - int(sizes.sum())
+        remainder = len(groups) - int(sizes.sum())
         remainder_order = np.argsort(-(exact_sizes - sizes), kind="stable")
         sizes[remainder_order[:remainder]] += 1
         if np.any(sizes == 0):
@@ -204,16 +265,17 @@ def assign_case_roles(
                 f"{pool.official_name} does not have enough cases for every role."
             )
 
-        ordered_ids = sorted(case_ids)
+        ordered_ids = sorted(groups)
         if len(pool.role_fractions) > 1:
             order = np.random.default_rng(seed).permutation(len(ordered_ids))
             ordered_ids = [ordered_ids[index] for index in order]
         start = 0
         for (role, _), size in zip(pool.role_fractions, sizes):
-            for case_id in ordered_ids[start : start + size]:
-                assignments.append(
-                    CaseAssignment(dataset_id, pool.pool_id, role, case_id)
-                )
+            assignments.extend(
+                CaseAssignment(dataset_id, pool.pool_id, role, case_id)
+                for group_id in ordered_ids[start : start + size]
+                for case_id in groups[group_id]
+            )
             start += size
 
     return assignments

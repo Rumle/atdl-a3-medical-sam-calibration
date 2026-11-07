@@ -1,0 +1,12 @@
+{
+  "fit_role": "calibration_fit",
+  "evaluation_role": "final_test",
+  "method": "OLS on clipped native score, then clip output to [0,1]",
+  "validation": "Not used: method fixed in advance; no model selection performed",
+  "mean_baseline": "Mean actual IoU of the source click-count calibration cases",
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 1,
+  "bootstrap_unit": "case",
+  "uncertainty": "Paired evaluation-case bootstrap with fixed fitted corrections. Fitting uncertainty is not included.",
+  "limitation": "Independence from checkpoint development is unverified"
+}

@@ -7,3 +7,6 @@ matplotlib==3.10.8
 Pillow>=10
 einops>=0.7
 timm==0.9.12
+gdown>=5
+scikit-image>=0.25
+scikit-learn>=1.7

@@ -1,0 +1,2489 @@
+{
+  "schema_version": 2,
+  "dataset_id": "papila",
+  "dataset_split": "PAPILA 488 eyes, split by patient",
+  "sample_count": 488,
+  "inference_new_count": 0,
+  "inference_reused_count": 488,
+  "case_role_ids": {
+    "calibration_fit": [
+      "RET180OD",
+      "RET180OS",
+      "RET264OD",
+      "RET264OS",
+      "RET036OD",
+      "RET036OS",
+      "RET287OD",
+      "RET287OS",
+      "RET010OD",
+      "RET010OS",
+      "RET255OD",
+      "RET255OS",
+      "RET069OD",
+      "RET069OS",
+      "RET084OD",
+      "RET084OS",
+      "RET123OD",
+      "RET123OS",
+      "RET090OD",
+      "RET090OS",
+      "RET169OD",
+      "RET169OS",
+      "RET174OD",
+      "RET174OS",
+      "RET055OD",
+      "RET055OS",
+      "RET030OD",
+      "RET030OS",
+      "RET151OD",
+      "RET151OS",
+      "RET019OD",
+      "RET019OS",
+      "RET028OD",
+      "RET028OS",
+      "RET142OD",
+      "RET142OS",
+      "RET202OD",
+      "RET202OS",
+      "RET020OD",
+      "RET020OS",
+      "RET125OD",
+      "RET125OS",
+      "RET177OD",
+      "RET177OS",
+      "RET240OD",
+      "RET240OS",
+      "RET004OD",
+      "RET004OS",
+      "RET029OD",
+      "RET029OS",
+      "RET221OD",
+      "RET221OS",
+      "RET288OD",
+      "RET288OS",
+      "RET188OD",
+      "RET188OS",
+      "RET204OD",
+      "RET204OS",
+      "RET158OD",
+      "RET158OS",
+      "RET013OD",
+      "RET013OS",
+      "RET114OD",
+      "RET114OS",
+      "RET190OD",
+      "RET190OS",
+      "RET175OD",
+      "RET175OS",
+      "RET008OD",
+      "RET008OS",
+      "RET165OD",
+      "RET165OS",
+      "RET031OD",
+      "RET031OS",
+      "RET026OD",
+      "RET026OS",
+      "RET119OD",
+      "RET119OS",
+      "RET273OD",
+      "RET273OS",
+      "RET038OD",
+      "RET038OS",
+      "RET126OD",
+      "RET126OS",
+      "RET271OD",
+      "RET271OS",
+      "RET194OD",
+      "RET194OS",
+      "RET286OD",
+      "RET286OS",
+      "RET270OD",
+      "RET270OS",
+      "RET027OD",
+      "RET027OS",
+      "RET261OD",
+      "RET261OS",
+      "RET260OD",
+      "RET260OS",
+      "RET269OD",
+      "RET269OS",
+      "RET127OD",
+      "RET127OS",
+      "RET215OD",
+      "RET215OS",
+      "RET138OD",
+      "RET138OS",
+      "RET237OD",
+      "RET237OS",
+      "RET160OD",
+      "RET160OS",
+      "RET225OD",
+      "RET225OS",
+      "RET208OD",
+      "RET208OS",
+      "RET282OD",
+      "RET282OS",
+      "RET207OD",
+      "RET207OS",
+      "RET239OD",
+      "RET239OS",
+      "RET147OD",
+      "RET147OS",
+      "RET149OD",
+      "RET149OS",
+      "RET243OD",
+      "RET243OS",
+      "RET096OD",
+      "RET096OS",
+      "RET064OD",
+      "RET064OS",
+      "RET234OD",
+      "RET234OS",
+      "RET014OD",
+      "RET014OS",
+      "RET162OD",
+      "RET162OS",
+      "RET197OD",
+      "RET197OS",
+      "RET034OD",
+      "RET034OS",
+      "RET102OD",
+      "RET102OS",
+      "RET189OD",
+      "RET189OS",
+      "RET170OD",
+      "RET170OS",
+      "RET050OD",
+      "RET050OS",
+      "RET182OD",
+      "RET182OS",
+      "RET144OD",
+      "RET144OS",
+      "RET166OD",
+      "RET166OS",
+      "RET178OD",
+      "RET178OS",
+      "RET056OD",
+      "RET056OS",
+      "RET007OD",
+      "RET007OS",
+      "RET088OD",
+      "RET088OS",
+      "RET246OD",
+      "RET246OS",
+      "RET154OD",
+      "RET154OS",
+      "RET146OD",
+      "RET146OS",
+      "RET025OD",
+      "RET025OS",
+      "RET122OD",
+      "RET122OS",
+      "RET120OD",
+      "RET120OS",
+      "RET152OD",
+      "RET152OS",
+      "RET116OD",
+      "RET116OS",
+      "RET232OD",
+      "RET232OS",
+      "RET023OD",
+      "RET023OS",
+      "RET203OD",
+      "RET203OS",
+      "RET220OD",
+      "RET220OS",
+      "RET033OD",
+      "RET033OS",
+      "RET200OD",
+      "RET200OS",
+      "RET107OD",
+      "RET107OS",
+      "RET073OD",
+      "RET073OS",
+      "RET092OD",
+      "RET092OS",
+      "RET079OD",
+      "RET079OS",
+      "RET093OD",
+      "RET093OS",
+      "RET290OD",
+      "RET290OS",
+      "RET047OD",
+      "RET047OS",
+      "RET212OD",
+      "RET212OS",
+      "RET222OD",
+      "RET222OS",
+      "RET168OD",
+      "RET168OS",
+      "RET216OD",
+      "RET216OS",
+      "RET196OD",
+      "RET196OS",
+      "RET198OD",
+      "RET198OS",
+      "RET291OD",
+      "RET291OS",
+      "RET042OD",
+      "RET042OS",
+      "RET039OD",
+      "RET039OS",
+      "RET289OD",
+      "RET289OS",
+      "RET135OD",
+      "RET135OS",
+      "RET201OD",
+      "RET201OS",
+      "RET065OD",
+      "RET065OS",
+      "RET163OD",
+      "RET163OS",
+      "RET242OD",
+      "RET242OS",
+      "RET037OD",
+      "RET037OS",
+      "RET223OD",
+      "RET223OS",
+      "RET009OD",
+      "RET009OS",
+      "RET106OD",
+      "RET106OS",
+      "RET133OD",
+      "RET133OS"
+    ],
+    "validation": [
+      "RET046OD",
+      "RET046OS",
+      "RET136OD",
+      "RET136OS",
+      "RET192OD",
+      "RET192OS",
+      "RET217OD",
+      "RET217OS",
+      "RET129OD",
+      "RET129OS",
+      "RET179OD",
+      "RET179OS",
+      "RET254OD",
+      "RET254OS",
+      "RET150OD",
+      "RET150OS",
+      "RET193OD",
+      "RET193OS",
+      "RET104OD",
+      "RET104OS",
+      "RET140OD",
+      "RET140OS",
+      "RET153OD",
+      "RET153OS",
+      "RET256OD",
+      "RET256OS",
+      "RET275OD",
+      "RET275OS",
+      "RET024OD",
+      "RET024OS",
+      "RET253OD",
+      "RET253OS",
+      "RET035OD",
+      "RET035OS",
+      "RET186OD",
+      "RET186OS",
+      "RET184OD",
+      "RET184OS",
+      "RET268OD",
+      "RET268OS",
+      "RET266OD",
+      "RET266OS",
+      "RET044OD",
+      "RET044OS",
+      "RET236OD",
+      "RET236OS",
+      "RET238OD",
+      "RET238OS",
+      "RET195OD",
+      "RET195OS",
+      "RET108OD",
+      "RET108OS",
+      "RET183OD",
+      "RET183OS",
+      "RET274OD",
+      "RET274OS",
+      "RET187OD",
+      "RET187OS",
+      "RET211OD",
+      "RET211OS",
+      "RET074OD",
+      "RET074OS",
+      "RET128OD",
+      "RET128OS",
+      "RET244OD",
+      "RET244OS",
+      "RET057OD",
+      "RET057OS",
+      "RET258OD",
+      "RET258OS",
+      "RET171OD",
+      "RET171OS",
+      "RET292OD",
+      "RET292OS",
+      "RET227OD",
+      "RET227OS",
+      "RET229OD",
+      "RET229OS",
+      "RET259OD",
+      "RET259OS",
+      "RET087OD",
+      "RET087OS",
+      "RET155OD",
+      "RET155OS",
+      "RET250OD",
+      "RET250OS",
+      "RET218OD",
+      "RET218OS",
+      "RET091OD",
+      "RET091OS",
+      "RET281OD",
+      "RET281OS",
+      "RET131OD",
+      "RET131OS",
+      "RET230OD",
+      "RET230OS",
+      "RET021OD",
+      "RET021OS",
+      "RET048OD",
+      "RET048OS",
+      "RET241OD",
+      "RET241OS",
+      "RET277OD",
+      "RET277OS",
+      "RET280OD",
+      "RET280OS",
+      "RET164OD",
+      "RET164OS",
+      "RET077OD",
+      "RET077OS",
+      "RET235OD",
+      "RET235OS",
+      "RET130OD",
+      "RET130OS",
+      "RET006OD",
+      "RET006OS",
+      "RET121OD",
+      "RET121OS",
+      "RET228OD",
+      "RET228OS",
+      "RET089OD",
+      "RET089OS"
+    ],
+    "final_test": [
+      "RET224OD",
+      "RET224OS",
+      "RET134OD",
+      "RET134OS",
+      "RET206OD",
+      "RET206OS",
+      "RET248OD",
+      "RET248OS",
+      "RET098OD",
+      "RET098OS",
+      "RET143OD",
+      "RET143OS",
+      "RET041OD",
+      "RET041OS",
+      "RET262OD",
+      "RET262OS",
+      "RET051OD",
+      "RET051OS",
+      "RET276OD",
+      "RET276OS",
+      "RET156OD",
+      "RET156OS",
+      "RET032OD",
+      "RET032OS",
+      "RET181OD",
+      "RET181OS",
+      "RET231OD",
+      "RET231OS",
+      "RET267OD",
+      "RET267OS",
+      "RET139OD",
+      "RET139OS",
+      "RET157OD",
+      "RET157OS",
+      "RET002OD",
+      "RET002OS",
+      "RET251OD",
+      "RET251OS",
+      "RET245OD",
+      "RET245OS",
+      "RET159OD",
+      "RET159OS",
+      "RET113OD",
+      "RET113OS",
+      "RET265OD",
+      "RET265OS",
+      "RET066OD",
+      "RET066OS",
+      "RET191OD",
+      "RET191OS",
+      "RET176OD",
+      "RET176OS",
+      "RET124OD",
+      "RET124OS",
+      "RET210OD",
+      "RET210OS",
+      "RET132OD",
+      "RET132OS",
+      "RET172OD",
+      "RET172OS",
+      "RET016OD",
+      "RET016OS",
+      "RET018OD",
+      "RET018OS",
+      "RET272OD",
+      "RET272OS",
+      "RET283OD",
+      "RET283OS",
+      "RET284OD",
+      "RET284OS",
+      "RET213OD",
+      "RET213OS",
+      "RET015OD",
+      "RET015OS",
+      "RET081OD",
+      "RET081OS",
+      "RET285OD",
+      "RET285OS",
+      "RET199OD",
+      "RET199OS",
+      "RET209OD",
+      "RET209OS",
+      "RET062OD",
+      "RET062OS",
+      "RET072OD",
+      "RET072OS",
+      "RET067OD",
+      "RET067OS",
+      "RET137OD",
+      "RET137OS",
+      "RET005OD",
+      "RET005OS",
+      "RET053OD",
+      "RET053OS",
+      "RET112OD",
+      "RET112OS",
+      "RET249OD",
+      "RET249OS",
+      "RET068OD",
+      "RET068OS",
+      "RET045OD",
+      "RET045OS",
+      "RET101OD",
+      "RET101OS",
+      "RET105OD",
+      "RET105OS",
+      "RET205OD",
+      "RET205OS",
+      "RET214OD",
+      "RET214OS",
+      "RET219OD",
+      "RET219OS",
+      "RET257OD",
+      "RET257OS",
+      "RET252OD",
+      "RET252OS",
+      "RET233OD",
+      "RET233OS",
+      "RET141OD",
+      "RET141OS",
+      "RET293OD",
+      "RET293OS"
+    ]
+  },
+  "case_roles": {
+    "RET180OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET180OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET264OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET264OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET036OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET036OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET287OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET287OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET010OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET010OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET255OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET255OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET069OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET069OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET084OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET084OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET123OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET123OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET090OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET090OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET169OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET169OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET174OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET174OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET055OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET055OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET030OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET030OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET151OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET151OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET019OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET019OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET028OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET028OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET142OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET142OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET202OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET202OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET020OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET020OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET125OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET125OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET177OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET177OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET240OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET240OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET004OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET004OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET029OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET029OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET221OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET221OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET288OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET288OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET188OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET188OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET204OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET204OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET158OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET158OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET013OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET013OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET114OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET114OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET190OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET190OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET175OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET175OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET008OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET008OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET165OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET165OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET031OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET031OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET026OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET026OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET119OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET119OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET273OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET273OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET038OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET038OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET126OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET126OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET271OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET271OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET194OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET194OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET286OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET286OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET270OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET270OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET027OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET027OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET261OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET261OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET260OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET260OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET269OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET269OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET127OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET127OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET215OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET215OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET138OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET138OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET237OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET237OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET160OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET160OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET225OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET225OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET208OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET208OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET282OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET282OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET207OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET207OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET239OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET239OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET147OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET147OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET149OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET149OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET243OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET243OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET096OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET096OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET064OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET064OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET234OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET234OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET014OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET014OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET162OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET162OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET197OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET197OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET034OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET034OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET102OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET102OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET189OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET189OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET170OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET170OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET050OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET050OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET182OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET182OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET144OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET144OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET166OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET166OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET178OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET178OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET056OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET056OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET007OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET007OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET088OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET088OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET246OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET246OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET154OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET154OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET146OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET146OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET025OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET025OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET122OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET122OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET120OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET120OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET152OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET152OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET116OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET116OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET232OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET232OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET023OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET023OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET203OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET203OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET220OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET220OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET033OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET033OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET200OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET200OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET107OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET107OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET073OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET073OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET092OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET092OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET079OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET079OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET093OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET093OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET290OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET290OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET047OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET047OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET212OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET212OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET222OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET222OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET168OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET168OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET216OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET216OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET196OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET196OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET198OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET198OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET291OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET291OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET042OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET042OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET039OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET039OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET289OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET289OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET135OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET135OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET201OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET201OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET065OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET065OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET163OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET163OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET242OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET242OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET037OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET037OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET223OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET223OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET009OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET009OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET106OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET106OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET133OD": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET133OS": {
+      "source_pool": "all_488",
+      "analysis_role": "calibration_fit"
+    },
+    "RET046OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET046OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET136OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET136OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET192OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET192OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET217OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET217OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET129OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET129OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET179OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET179OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET254OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET254OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET150OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET150OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET193OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET193OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET104OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET104OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET140OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET140OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET153OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET153OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET256OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET256OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET275OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET275OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET024OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET024OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET253OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET253OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET035OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET035OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET186OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET186OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET184OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET184OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET268OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET268OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET266OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET266OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET044OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET044OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET236OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET236OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET238OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET238OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET195OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET195OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET108OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET108OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET183OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET183OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET274OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET274OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET187OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET187OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET211OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET211OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET074OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET074OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET128OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET128OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET244OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET244OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET057OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET057OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET258OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET258OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET171OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET171OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET292OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET292OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET227OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET227OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET229OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET229OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET259OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET259OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET087OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET087OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET155OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET155OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET250OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET250OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET218OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET218OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET091OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET091OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET281OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET281OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET131OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET131OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET230OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET230OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET021OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET021OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET048OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET048OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET241OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET241OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET277OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET277OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET280OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET280OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET164OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET164OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET077OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET077OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET235OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET235OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET130OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET130OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET006OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET006OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET121OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET121OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET228OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET228OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET089OD": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET089OS": {
+      "source_pool": "all_488",
+      "analysis_role": "validation"
+    },
+    "RET224OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET224OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET134OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET134OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET206OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET206OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET248OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET248OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET098OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET098OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET143OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET143OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET041OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET041OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET262OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET262OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET051OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET051OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET276OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET276OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET156OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET156OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET032OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET032OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET181OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET181OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET231OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET231OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET267OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET267OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET139OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET139OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET157OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET157OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET002OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET002OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET251OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET251OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET245OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET245OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET159OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET159OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET113OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET113OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET265OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET265OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET066OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET066OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET191OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET191OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET176OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET176OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET124OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET124OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET210OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET210OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET132OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET132OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET172OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET172OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET016OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET016OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET018OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET018OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET272OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET272OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET283OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET283OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET284OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET284OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET213OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET213OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET015OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET015OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET081OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET081OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET285OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET285OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET199OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET199OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET209OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET209OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET062OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET062OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET072OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET072OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET067OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET067OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET137OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET137OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET005OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET005OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET053OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET053OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET112OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET112OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET249OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET249OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET068OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET068OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET045OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET045OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET101OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET101OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET105OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET105OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET205OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET205OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET214OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET214OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET219OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET219OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET257OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET257OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET252OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET252OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET233OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET233OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET141OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET141OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET293OD": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    },
+    "RET293OS": {
+      "source_pool": "all_488",
+      "analysis_role": "final_test"
+    }
+  },
+  "role_counts": {
+    "calibration_fit": 244,
+    "validation": 122,
+    "final_test": 122
+  },
+  "calibration_count": 244,
+  "validation_count": 122,
+  "evaluation_role": "final_test",
+  "evaluation_count": 122,
+  "sampling_seed": 1,
+  "partition_seed": 1,
+  "model_seed": 1,
+  "ground_truth": "Fill expert 1's optic-disc outline to make a mask at the original image size.",
+  "gpu": "not used (predictions cached)",
+  "measurements": {
+    "base_sam": {
+      "images": 0,
+      "inference_seconds": 0.0
+    },
+    "med_sa_adapter": {
+      "images": 0,
+      "inference_seconds": 0.0
+    }
+  },
+  "prompt_rule": "Choose positive clicks from the consensus mask. The first click is the foreground pixel farthest from the boundary. Each later click is the remaining foreground pixel farthest from the earlier clicks. Smaller prompts use the first points of the three-click prompt.",
+  "prompt_settings": {
+    "rule": "distance",
+    "seed": 1,
+    "description": "Choose positive clicks from the consensus mask. The first click is the foreground pixel farthest from the boundary. Each later click is the remaining foreground pixel farthest from the earlier clicks. Smaller prompts use the first points of the three-click prompt."
+  },
+  "mask_selection": "Use the output from mask token 0 and its matching predicted-IoU score."
+}

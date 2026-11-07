@@ -2,6 +2,8 @@ __pycache__/
 *.py[cod]
 .venv/
 data/
+# RIM-ONE forbids redistribution of its reference masks.
+runs/rim_one_dl*/inference/predictions/
 tests/
 /README_MEMBER4.md
 /test_member4.py

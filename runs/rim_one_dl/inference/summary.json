@@ -1,0 +1,2474 @@
+{
+  "schema_version": 2,
+  "dataset_id": "rim_one_dl",
+  "dataset_split": "Official random partition training set + Official random partition test set",
+  "sample_count": 485,
+  "inference_new_count": 0,
+  "inference_reused_count": 485,
+  "case_role_ids": {
+    "calibration_fit": [
+      "r3_G-32-L_left_half",
+      "r2_Im112",
+      "r2_Im017",
+      "r3_S-35-R_left_half",
+      "r2_Im400",
+      "r2_Im254",
+      "r2_Im329",
+      "r3_N-13-L_left_half",
+      "r2_Im154",
+      "r1_Im003",
+      "r2_Im182",
+      "r2_Im352",
+      "r2_Im238",
+      "r2_Im100",
+      "r1_Im020",
+      "r3_N-25-L_left_half",
+      "r1_Im135",
+      "r3_N-92-R_left_half",
+      "r1_Im019",
+      "r2_Im344",
+      "r2_Im216",
+      "r1_Im032",
+      "r2_Im424",
+      "r2_Im011",
+      "r2_Im258",
+      "r2_Im056",
+      "r2_Im009",
+      "r3_N-68-R_left_half",
+      "r2_Im048",
+      "r2_Im388",
+      "r2_Im068",
+      "r1_Im028",
+      "r2_Im058",
+      "r2_Im156",
+      "r1_Im121",
+      "r3_N-5-L_left_half",
+      "r2_Im052",
+      "r2_Im012",
+      "r2_Im293",
+      "r3_N-2-R_left_half",
+      "r2_Im186",
+      "r2_Im270",
+      "r1_Im041",
+      "r1_Im047",
+      "r2_Im228",
+      "r3_S-19-R_left_half",
+      "r1_Im026",
+      "r2_Im074",
+      "r3_S-31-L_left_half",
+      "r1_Im012",
+      "r3_N-36-R_left_half",
+      "r2_Im419",
+      "r1_Im014",
+      "r3_G-14-R_left_half",
+      "r2_Im383",
+      "r1_Im046",
+      "r2_Im032",
+      "r2_Im343",
+      "r1_Im023",
+      "r3_N-22-R_left_half",
+      "r2_Im019",
+      "r2_Im281",
+      "r2_Im132",
+      "r2_Im176",
+      "r1_Im031",
+      "r1_Im037",
+      "r3_N-90-R_left_half",
+      "r2_Im266",
+      "r2_Im432",
+      "r2_Im373",
+      "r3_S-33-R_left_half",
+      "r3_N-1-L_left_half",
+      "r1_Im152",
+      "r3_N-26-R_left_half",
+      "r1_Im063",
+      "r2_Im104",
+      "r3_N-80-R_left_half",
+      "r2_Im398",
+      "r2_Im029",
+      "r2_Im066",
+      "r2_Im092",
+      "r2_Im387",
+      "r2_Im016",
+      "r1_Im095",
+      "r1_Im056",
+      "r2_Im122",
+      "r2_Im263",
+      "r2_Im315",
+      "r1_Im015",
+      "r2_Im102",
+      "r2_Im004",
+      "r2_Im275",
+      "r1_Im165",
+      "r3_G-6-L_left_half",
+      "r1_Im150",
+      "r1_Im146",
+      "r2_Im194",
+      "r2_Im222",
+      "r2_Im291",
+      "r1_Im168",
+      "r3_S-6-R_left_half",
+      "r2_Im128",
+      "r3_G-39-L_left_half",
+      "r2_Im406",
+      "r3_N-88-R_left_half",
+      "r1_Im059",
+      "r3_N-14-R_left_half",
+      "r2_Im022",
+      "r3_N-24-R_left_half",
+      "r3_N-12-R_left_half",
+      "r3_G-3-R_left_half",
+      "r3_G-2-R_left_half",
+      "r2_Im354",
+      "r2_Im148",
+      "r2_Im357",
+      "r2_Im192",
+      "r3_N-72-R_left_half",
+      "r2_Im188",
+      "r1_Im027",
+      "r2_Im289",
+      "r1_Im054",
+      "r2_Im170",
+      "r1_Im011",
+      "r2_Im427",
+      "r1_Im127",
+      "r3_G-12-L_left_half",
+      "r1_Im058",
+      "r2_Im320",
+      "r2_Im428",
+      "r3_N-64-R_left_half",
+      "r3_N-23-L_left_half",
+      "r2_Im292",
+      "r2_Im392",
+      "r2_Im333",
+      "r2_Im138",
+      "r3_N-63-L_left_half",
+      "r3_S-4-L_left_half",
+      "r1_Im001",
+      "r3_S-30-L_left_half",
+      "r2_Im232",
+      "r2_Im421",
+      "r3_N-76-R_left_half",
+      "r3_N-31-L_left_half",
+      "r1_Im159",
+      "r2_Im134",
+      "r2_Im124",
+      "r1_Im149",
+      "r2_Im338",
+      "r1_Im069",
+      "r2_Im178",
+      "r1_Im118",
+      "r3_G-8-R_left_half",
+      "r1_Im033",
+      "r2_Im236",
+      "r1_Im103",
+      "r2_Im418",
+      "r1_Im144",
+      "r3_N-20-R_left_half",
+      "r2_Im399",
+      "r2_Im294",
+      "r2_Im267",
+      "r1_Im036",
+      "r3_N-78-R_left_half",
+      "r2_Im146",
+      "r1_Im122",
+      "r1_Im131",
+      "r2_Im164",
+      "r1_Im158",
+      "r3_N-62-R_left_half",
+      "r2_Im269",
+      "r3_S-32-L_left_half",
+      "r3_G-16-R_left_half",
+      "r2_Im288",
+      "r1_Im116",
+      "r2_Im136",
+      "r2_Im014",
+      "r3_N-42-R_left_half",
+      "r1_Im082",
+      "r3_G-37-R_left_half",
+      "r2_Im429",
+      "r1_Im153",
+      "r3_S-29-R_left_half",
+      "r3_N-66-R_left_half",
+      "r2_Im086",
+      "r3_N-54-R_left_half",
+      "r3_G-38-L_left_half",
+      "r2_Im210",
+      "r2_Im242",
+      "r2_Im449",
+      "r2_Im030",
+      "r2_Im257",
+      "r3_N-74-L_left_half",
+      "r1_Im138",
+      "r2_Im114",
+      "r2_Im348",
+      "r3_N-3-L_left_half",
+      "r2_Im174",
+      "r2_Im054",
+      "r3_N-52-R_left_half",
+      "r3_N-28-R_left_half",
+      "r3_S-28-R_left_half",
+      "r1_Im166",
+      "r2_Im078",
+      "r3_N-50-R_left_half",
+      "r3_N-27-L_left_half",
+      "r1_Im029",
+      "r2_Im420",
+      "r2_Im443",
+      "r1_Im052",
+      "r1_Im108",
+      "r3_G-18-R_left_half",
+      "r2_Im090",
+      "r2_Im273",
+      "r2_Im110",
+      "r2_Im108",
+      "r2_Im302",
+      "r1_Im132",
+      "r2_Im106",
+      "r2_Im303",
+      "r2_Im318",
+      "r1_Im073",
+      "r2_Im230",
+      "r3_N-35-L_left_half",
+      "r2_Im451",
+      "r1_Im080",
+      "r2_Im301",
+      "r2_Im018",
+      "r1_Im151",
+      "r1_Im062",
+      "r2_Im224",
+      "r3_N-30-R_left_half",
+      "r2_Im250",
+      "r2_Im389",
+      "r2_Im384",
+      "r3_G-25-L_left_half",
+      "r2_Im436",
+      "r3_G-15-L_left_half",
+      "r1_Im057",
+      "r2_Im377",
+      "r2_Im130",
+      "r2_Im330",
+      "r2_Im026",
+      "r1_Im071",
+      "r2_Im390",
+      "r1_Im161",
+      "r3_S-20-L_left_half",
+      "r3_G-17-L_left_half",
+      "r3_N-11-L_left_half",
+      "r2_Im021",
+      "r2_Im064",
+      "r3_N-86-R_left_half",
+      "r2_Im376",
+      "r3_N-47-L_left_half",
+      "r1_Im155"
+    ],
+    "validation": [
+      "r2_Im264",
+      "r2_Im040",
+      "r2_Im070",
+      "r2_Im013",
+      "r3_S-13-R_left_half",
+      "r2_Im355",
+      "r2_Im200",
+      "r3_N-82-R_left_half",
+      "r2_Im305",
+      "r1_Im055",
+      "r2_Im433",
+      "r2_Im168",
+      "r3_N-8-L_left_half",
+      "r3_G-31-R_left_half",
+      "r1_Im120",
+      "r1_Im129",
+      "r2_Im036",
+      "r2_Im358",
+      "r2_Im366",
+      "r2_Im220",
+      "r3_N-4-R_left_half",
+      "r3_N-39-L_left_half",
+      "r3_N-44-R_left_half",
+      "r3_N-75-R_left_half",
+      "r1_Im137",
+      "r2_Im076",
+      "r3_N-7-L_left_half",
+      "r1_Im145",
+      "r3_N-67-L_left_half",
+      "r3_N-16-R_left_half",
+      "r3_N-56-R_left_half",
+      "r2_Im020",
+      "r1_Im008",
+      "r3_N-41-L_left_half",
+      "r1_Im143",
+      "r2_Im321",
+      "r2_Im268",
+      "r3_S-2-L_left_half",
+      "r2_Im365",
+      "r2_Im028",
+      "r3_N-69-L_left_half",
+      "r2_Im050",
+      "r2_Im369",
+      "r1_Im060",
+      "r1_Im086",
+      "r3_S-14-R_left_half",
+      "r1_Im050",
+      "r3_N-85-L_left_half",
+      "r2_Im084",
+      "r3_G-29-R_left_half",
+      "r3_S-12-L_left_half",
+      "r2_Im088",
+      "r1_Im164",
+      "r1_Im119",
+      "r2_Im448",
+      "r2_Im126",
+      "r2_Im118",
+      "r1_Im024",
+      "r1_Im025",
+      "r3_N-91-L_left_half",
+      "r3_S-25-L_left_half",
+      "r2_Im244",
+      "r3_N-10-R_left_half",
+      "r1_Im133",
+      "r2_Im196",
+      "r2_Im234",
+      "r1_Im113",
+      "r1_Im125",
+      "r3_N-70-R_left_half",
+      "r2_Im031",
+      "r1_Im004",
+      "r1_Im087",
+      "r1_Im163",
+      "r2_Im331",
+      "r3_N-71-L_left_half",
+      "r3_N-48-R_left_half",
+      "r3_S-18-L_left_half",
+      "r1_Im156",
+      "r2_Im246",
+      "r2_Im260",
+      "r2_Im455",
+      "r2_Im339",
+      "r2_Im290",
+      "r2_Im044",
+      "r3_G-27-R_left_half"
+    ],
+    "final_test": [
+      "r1_Im006",
+      "r1_Im022",
+      "r1_Im040",
+      "r1_Im042",
+      "r1_Im061",
+      "r1_Im072",
+      "r1_Im107",
+      "r1_Im115",
+      "r1_Im117",
+      "r1_Im128",
+      "r1_Im130",
+      "r1_Im136",
+      "r1_Im142",
+      "r1_Im154",
+      "r1_Im162",
+      "r1_Im167",
+      "r1_Im169",
+      "r2_Im001",
+      "r2_Im002",
+      "r2_Im003",
+      "r2_Im005",
+      "r2_Im006",
+      "r2_Im007",
+      "r2_Im010",
+      "r2_Im015",
+      "r2_Im023",
+      "r2_Im024",
+      "r2_Im025",
+      "r2_Im027",
+      "r2_Im033",
+      "r2_Im034",
+      "r2_Im038",
+      "r2_Im042",
+      "r2_Im046",
+      "r2_Im060",
+      "r2_Im062",
+      "r2_Im072",
+      "r2_Im080",
+      "r2_Im082",
+      "r2_Im094",
+      "r2_Im096",
+      "r2_Im098",
+      "r2_Im116",
+      "r2_Im120",
+      "r2_Im140",
+      "r2_Im142",
+      "r2_Im144",
+      "r2_Im150",
+      "r2_Im152",
+      "r2_Im158",
+      "r2_Im160",
+      "r2_Im162",
+      "r2_Im166",
+      "r2_Im172",
+      "r2_Im180",
+      "r2_Im184",
+      "r2_Im190",
+      "r2_Im198",
+      "r2_Im202",
+      "r2_Im206",
+      "r2_Im208",
+      "r2_Im212",
+      "r2_Im214",
+      "r2_Im218",
+      "r2_Im226",
+      "r2_Im240",
+      "r2_Im248",
+      "r2_Im252",
+      "r2_Im277",
+      "r2_Im287",
+      "r2_Im314",
+      "r2_Im317",
+      "r2_Im319",
+      "r2_Im324",
+      "r2_Im332",
+      "r2_Im334",
+      "r2_Im347",
+      "r2_Im351",
+      "r2_Im356",
+      "r2_Im362",
+      "r2_Im385",
+      "r2_Im391",
+      "r2_Im393",
+      "r2_Im401",
+      "r2_Im402",
+      "r2_Im403",
+      "r2_Im404",
+      "r2_Im407",
+      "r2_Im408",
+      "r2_Im414",
+      "r2_Im415",
+      "r2_Im416",
+      "r2_Im422",
+      "r2_Im439",
+      "r2_Im441",
+      "r2_Im442",
+      "r2_Im444",
+      "r2_Im445",
+      "r2_Im450",
+      "r2_Im453",
+      "r2_Im454",
+      "r3_G-1-L_left_half",
+      "r3_G-10-L_left_half",
+      "r3_G-11-R_left_half",
+      "r3_G-13-R_left_half",
+      "r3_G-22-L_left_half",
+      "r3_G-23-R_left_half",
+      "r3_G-30-L_left_half",
+      "r3_G-33-R_left_half",
+      "r3_G-34-L_left_half",
+      "r3_G-35-R_left_half",
+      "r3_G-9-R_left_half",
+      "r3_N-17-L_left_half",
+      "r3_N-18-R_left_half",
+      "r3_N-21-L_left_half",
+      "r3_N-29-L_left_half",
+      "r3_N-32-R_left_half",
+      "r3_N-33-L_left_half",
+      "r3_N-34-R_left_half",
+      "r3_N-37-L_left_half",
+      "r3_N-38-R_left_half",
+      "r3_N-40-R_left_half",
+      "r3_N-43-L_left_half",
+      "r3_N-46-R_left_half",
+      "r3_N-49-L_left_half",
+      "r3_N-51-L_left_half",
+      "r3_N-53-L_left_half",
+      "r3_N-55-L_left_half",
+      "r3_N-58-R_left_half",
+      "r3_N-59-L_left_half",
+      "r3_N-6-R_left_half",
+      "r3_N-61-L_left_half",
+      "r3_N-65-L_left_half",
+      "r3_N-73-R_left_half",
+      "r3_N-79-L_left_half",
+      "r3_N-81-L_left_half",
+      "r3_N-83-L_left_half",
+      "r3_N-84-R_left_half",
+      "r3_N-87-L_left_half",
+      "r3_N-9-L_left_half",
+      "r3_S-1-L_left_half",
+      "r3_S-10-R_left_half",
+      "r3_S-11-L_left_half",
+      "r3_S-21-R_left_half",
+      "r3_S-26-R_left_half",
+      "r3_S-9-L_left_half"
+    ]
+  },
+  "case_roles": {
+    "r3_G-32-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im112": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im017": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_S-35-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im400": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im254": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im329": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-13-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im154": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im003": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im182": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im352": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im238": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im100": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im020": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-25-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im135": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-92-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im019": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im344": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im216": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im032": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im424": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im011": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im258": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im056": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im009": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-68-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im048": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im388": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im068": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im028": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im058": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im156": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im121": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-5-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im052": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im012": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im293": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-2-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im186": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im270": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im041": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im047": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im228": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_S-19-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im026": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im074": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_S-31-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im012": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-36-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im419": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im014": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_G-14-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im383": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im046": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im032": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im343": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im023": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-22-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im019": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im281": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im132": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im176": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im031": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im037": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-90-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im266": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im432": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im373": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_S-33-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-1-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im152": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-26-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im063": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im104": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-80-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im398": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im029": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im066": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im092": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im387": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im016": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im095": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im056": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im122": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im263": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im315": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im015": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im102": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im004": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im275": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im165": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_G-6-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im150": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im146": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im194": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im222": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im291": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im168": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_S-6-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im128": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_G-39-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im406": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-88-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im059": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-14-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im022": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-24-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-12-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_G-3-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_G-2-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im354": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im148": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im357": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im192": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-72-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im188": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im027": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im289": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im054": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im170": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im011": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im427": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im127": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_G-12-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im058": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im320": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im428": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-64-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-23-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im292": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im392": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im333": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im138": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-63-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_S-4-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im001": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_S-30-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im232": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im421": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-76-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-31-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im159": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im134": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im124": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im149": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im338": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im069": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im178": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im118": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_G-8-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im033": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im236": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im103": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im418": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im144": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-20-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im399": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im294": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im267": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im036": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-78-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im146": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im122": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im131": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im164": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im158": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-62-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im269": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_S-32-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_G-16-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im288": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im116": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im136": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im014": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-42-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im082": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_G-37-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im429": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im153": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_S-29-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-66-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im086": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-54-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_G-38-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im210": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im242": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im449": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im030": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im257": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-74-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im138": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im114": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im348": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-3-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im174": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im054": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-52-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-28-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_S-28-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im166": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im078": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-50-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-27-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im029": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im420": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im443": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im052": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im108": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_G-18-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im090": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im273": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im110": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im108": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im302": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im132": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im106": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im303": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im318": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im073": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im230": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-35-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im451": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im080": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im301": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im018": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im151": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im062": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im224": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-30-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im250": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im389": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im384": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_G-25-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im436": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_G-15-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im057": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im377": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im130": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im330": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im026": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im071": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im390": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im161": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_S-20-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_G-17-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-11-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im021": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im064": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-86-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im376": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r3_N-47-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r1_Im155": {
+      "source_pool": "training_339",
+      "analysis_role": "calibration_fit"
+    },
+    "r2_Im264": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im040": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im070": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im013": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r3_S-13-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im355": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im200": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r3_N-82-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im305": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r1_Im055": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im433": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im168": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r3_N-8-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r3_G-31-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r1_Im120": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r1_Im129": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im036": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im358": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im366": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im220": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r3_N-4-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r3_N-39-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r3_N-44-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r3_N-75-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r1_Im137": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im076": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r3_N-7-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r1_Im145": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r3_N-67-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r3_N-16-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r3_N-56-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im020": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r1_Im008": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r3_N-41-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r1_Im143": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im321": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im268": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r3_S-2-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im365": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im028": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r3_N-69-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im050": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im369": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r1_Im060": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r1_Im086": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r3_S-14-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r1_Im050": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r3_N-85-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im084": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r3_G-29-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r3_S-12-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im088": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r1_Im164": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r1_Im119": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im448": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im126": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im118": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r1_Im024": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r1_Im025": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r3_N-91-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r3_S-25-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im244": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r3_N-10-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r1_Im133": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im196": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im234": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r1_Im113": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r1_Im125": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r3_N-70-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im031": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r1_Im004": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r1_Im087": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r1_Im163": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im331": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r3_N-71-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r3_N-48-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r3_S-18-L_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r1_Im156": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im246": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im260": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im455": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im339": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im290": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r2_Im044": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r3_G-27-R_left_half": {
+      "source_pool": "training_339",
+      "analysis_role": "validation"
+    },
+    "r1_Im006": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r1_Im022": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r1_Im040": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r1_Im042": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r1_Im061": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r1_Im072": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r1_Im107": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r1_Im115": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r1_Im117": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r1_Im128": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r1_Im130": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r1_Im136": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r1_Im142": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r1_Im154": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r1_Im162": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r1_Im167": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r1_Im169": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im001": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im002": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im003": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im005": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im006": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im007": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im010": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im015": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im023": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im024": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im025": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im027": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im033": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im034": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im038": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im042": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im046": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im060": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im062": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im072": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im080": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im082": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im094": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im096": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im098": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im116": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im120": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im140": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im142": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im144": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im150": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im152": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im158": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im160": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im162": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im166": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im172": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im180": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im184": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im190": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im198": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im202": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im206": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im208": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im212": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im214": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im218": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im226": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im240": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im248": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im252": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im277": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im287": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im314": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im317": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im319": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im324": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im332": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im334": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im347": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im351": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im356": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im362": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im385": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im391": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im393": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im401": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im402": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im403": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im404": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im407": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im408": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im414": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im415": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im416": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im422": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im439": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im441": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im442": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im444": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im445": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im450": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im453": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r2_Im454": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_G-1-L_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_G-10-L_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_G-11-R_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_G-13-R_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_G-22-L_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_G-23-R_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_G-30-L_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_G-33-R_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_G-34-L_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_G-35-R_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_G-9-R_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_N-17-L_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_N-18-R_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_N-21-L_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_N-29-L_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_N-32-R_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_N-33-L_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_N-34-R_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_N-37-L_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_N-38-R_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_N-40-R_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_N-43-L_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_N-46-R_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_N-49-L_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_N-51-L_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_N-53-L_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_N-55-L_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_N-58-R_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_N-59-L_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_N-6-R_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_N-61-L_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_N-65-L_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_N-73-R_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_N-79-L_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_N-81-L_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_N-83-L_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_N-84-R_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_N-87-L_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_N-9-L_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_S-1-L_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_S-10-R_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_S-11-L_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_S-21-R_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_S-26-R_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    },
+    "r3_S-9-L_left_half": {
+      "source_pool": "test_146",
+      "analysis_role": "final_test"
+    }
+  },
+  "role_counts": {
+    "calibration_fit": 254,
+    "validation": 85,
+    "final_test": 146
+  },
+  "calibration_count": 254,
+  "validation_count": 85,
+  "evaluation_role": "final_test",
+  "evaluation_count": 146,
+  "sampling_seed": 1,
+  "partition_seed": 1,
+  "model_seed": 1,
+  "ground_truth": "Use the supplied optic-disc mask. Every nonzero pixel belongs to the disc.",
+  "gpu": "not used (predictions cached)",
+  "measurements": {
+    "base_sam": {
+      "images": 0,
+      "inference_seconds": 0.0
+    },
+    "med_sa_adapter": {
+      "images": 0,
+      "inference_seconds": 0.0
+    }
+  },
+  "prompt_rule": "Choose positive clicks from the consensus mask. The first click is the foreground pixel farthest from the boundary. Each later click is the remaining foreground pixel farthest from the earlier clicks. Smaller prompts use the first points of the three-click prompt.",
+  "prompt_settings": {
+    "rule": "distance",
+    "seed": 1,
+    "description": "Choose positive clicks from the consensus mask. The first click is the foreground pixel farthest from the boundary. Each later click is the remaining foreground pixel farthest from the earlier clicks. Smaller prompts use the first points of the three-click prompt."
+  },
+  "mask_selection": "Use the output from mask token 0 and its matching predicted-IoU score."
+}

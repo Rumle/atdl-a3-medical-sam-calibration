@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from experiment_protocol import PROTOCOL
+from bootstrap import bootstrap_indices, bootstrap_unit, dataset_id_from_rows
 
 
 MODELS = ("base_sam", "med_sa_adapter")
@@ -106,6 +107,8 @@ def bootstrap_interval(
     statistic: str,
     replicates: int = 2000,
     seed: int = 1,
+    case_ids: list[str] | None = None,
+    dataset_id: str | None = None,
 ) -> tuple[float, float]:
     scores = np.asarray(scores, dtype=float)
     targets = np.asarray(targets, dtype=float)
@@ -120,10 +123,16 @@ def bootstrap_interval(
         raise ValueError("replicates must be at least 1.")
 
     scores = np.clip(scores, 0.0, 1.0)
-    rng = np.random.default_rng(seed)
-    samples = rng.integers(0, scores.size, size=(replicates, scores.size))
-    errors = scores[samples] - targets[samples]
-    estimates = np.abs(errors).mean(axis=1) if statistic == "mae" else errors.mean(axis=1)
+    if case_ids is None:
+        case_ids = [str(index) for index in range(scores.size)]
+    if len(case_ids) != scores.size:
+        raise ValueError("Case IDs must match the score and target arrays.")
+    errors = scores - targets
+    values = np.abs(errors) if statistic == "mae" else errors
+    estimates = [
+        values[indices].mean()
+        for indices in bootstrap_indices(case_ids, dataset_id, replicates, seed)
+    ]
     low, high = np.quantile(estimates, [0.025, 0.975])
     return float(low), float(high)
 
@@ -260,11 +269,13 @@ def summarize_conditions(
         scores = np.array([row["native_score"] for row in selected], dtype=float)
         targets = np.array([row["observed_iou"] for row in selected], dtype=float)
         metrics = regression_metrics(scores, targets)
+        case_ids = [row["case_id"] for row in selected]
+        dataset_id = dataset_id_from_rows(selected)
         mae_low, mae_high = bootstrap_interval(
-            scores, targets, "mae", replicates, seed
+            scores, targets, "mae", replicates, seed, case_ids, dataset_id
         )
         bias_low, bias_high = bootstrap_interval(
-            scores, targets, "bias", replicates, seed
+            scores, targets, "bias", replicates, seed, case_ids, dataset_id
         )
         metrics_rows.append(
             {
@@ -389,6 +400,7 @@ def analyze_predictions(
         "evaluation_role": evaluation_role,
         "evaluation_cases": len(evaluation_case_ids),
         "evaluation_case_ids": evaluation_case_ids,
+        "bootstrap_unit": bootstrap_unit(run_summary.get("dataset_id")),
         "sampling_seed": run_summary.get("sampling_seed"),
         "partition_seed": run_summary.get("partition_seed"),
         "ground_truth": run_summary.get("ground_truth"),
@@ -415,7 +427,8 @@ def analyze_predictions(
             ),
             "confidence_intervals": (
                 f"We calculate 95% percentile intervals for MAE and signed bias "
-                f"with {replicates} case-level bootstrap samples and seed {seed}."
+                f"with {replicates} {bootstrap_unit(run_summary.get('dataset_id'))}"
+                f"-level bootstrap samples and seed {seed}."
             ),
             "roles": (
                 "We calculate metrics on final_test cases when available. "

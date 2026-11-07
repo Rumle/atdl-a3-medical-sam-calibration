@@ -108,9 +108,10 @@
     "0512",
     "0673"
   ],
+  "bootstrap_unit": "case",
   "sampling_seed": 1,
   "partition_seed": 1,
-  "ground_truth": "Pixelwise majority vote from seven raters. Mark a pixel as foreground when at least four raters do.",
+  "ground_truth": "Use the seven rater masks. A pixel belongs to the optic disc when at least four raters include it.",
   "gpu": "not used (predictions cached)",
   "inference_measurements": {
     "base_sam": {

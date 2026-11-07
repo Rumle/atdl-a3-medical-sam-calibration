@@ -1,25 +1,14 @@
 # Med-SA score calibration study
 
-The present work compares the native quality scores produced by the original SAM model and by a released Medical SAM Adapter (Med-SA) checkpoint to the actual IoU of the optic-disc masks generated on REFUGE Test-400.
+We compare the native quality scores from original SAM and a released Medical SAM Adapter (Med-SA) checkpoint with the actual IoU of their optic-disc masks on REFUGE Test-400, PAPILA and RIM-ONE DL.
 
-Native-score reliability has been studied so far. No calibration method has yet been fitted or evaluated.
+The pipeline includes native-score analysis, linear score corrections, click-count transfer and pooled-versus-separate corrections.
 
 ## Research question
 
 Does a score correction fitted at one click count (one, two, or three clicks) also work at the other click counts? Does this differ between SAM and Med-SA?
 
 We expect a correction to work best at the click count it was fitted on, and to work worse the further the target click count is from it. For example, a one-click correction should transfer better to two clicks than to three. We keep the segmentation checkpoints fixed. We do not train a segmentation model or reproduce Med-SA's training or full evaluation.
-
-## Project status
-
-| Part | Status |
-| --- | --- |
-| SAM and Med-SA predictions on REFUGE Test-400 | Complete |
-| Native-score reliability analysis | Complete |
-| Calibration-fit, validation, and evaluation roles | Implemented |
-| Calibration fitting and transfer analysis | Not implemented |
-| Drishti-GS1 inference | Implemented, not run (data must be added by hand) |
-| Independent final evaluation | Not available |
 
 The REFUGE results remain exploratory. Med-SA reports REFUGE2 and the upstream REFUGE code can use Test-400 to select a checkpoint. No case-level record of the data used to train or select the released adapter is available so exposure to these cases cannot be confirmed. Evaluation cases are kept separate from calibration fitting and validation yet independence from checkpoint development cannot be verified. They are labelled `internal_evaluation_overlap_risk`.
 
@@ -32,9 +21,9 @@ Two models are compared:
 
 Every REFUGE case supplies an image plus seven optic-disc rater masks. A pixel is treated as foreground in the consensus mask when at least four raters mark it as foreground. Each image is resized so that its longer side equals 1024 pixels. Mask token 0 is used together with its matching predicted-IoU score.
 
-Prompts contain one, two, or three positive clicks. Each larger prompt includes the smaller ones so the clicks are added sequentially. The clicks are simulated from the consensus mask. The first click lands on the foreground pixel farthest from the boundary. Each subsequent click lands on a remaining foreground pixel farthest from the earlier clicks. These are simulated prompts rather than clicks recorded from clinicians.
+Prompts contain one, two or three positive clicks. Each larger prompt includes the smaller ones so the clicks are added sequentially. The clicks are simulated from the ground-truth mask. By default the first click lands on the foreground pixel farthest from the boundary. Each subsequent click lands on a remaining foreground pixel farthest from the earlier clicks. The alternative rule samples foreground pixels randomly with a fixed per-case seed. These are simulated prompts rather than clicks recorded from clinicians.
 
-Cases are assigned to roles by case ID with fixed random seeds:
+REFUGE cases are assigned to roles by case ID with fixed random seeds:
 
 | Role | Cases | Purpose |
 | --- | ---: | --- |
@@ -44,7 +33,7 @@ Cases are assigned to roles by case ID with fixed random seeds:
 
 The native-score analysis uses only the evaluation cases. It neither fits nor selects a method.
 
-Drishti-GS1 was also considered as a possible external evaluation set. Its 50-case training pool could supply 30 cases for calibration fitting and 20 for validation. Its separate 51-case test pool could serve for final evaluation yet obtaining the labels requires registration. The data are absent from this repository and cannot be downloaded automatically. The runner reads Drishti from `data/drishti_gs1/` together with a `case_manifest.csv` (columns `case_id`, `source_pool`, `image_path`, `optic_disc_mask`) but the run has not been performed yet. Exposure of the released adapter to these cases is likewise unknown so they cannot be treated as an unseen dataset.
+PAPILA uses expert 1's optic-disc outline and a patient-level split of 244 calibration-fit, 122 validation and 122 final-test eyes. RIM-ONE DL uses its supplied optic-disc masks and official random partition with 254 calibration-fit, 85 validation and 146 final-test cases. Independence from checkpoint development is unverified for both datasets.
 
 Shared settings live in [`experiment_protocol.py`](experiment_protocol.py). Saved predictions are reused for a case only when the settings, inputs, checkpoints, and code all match so a change of setting forces inference to be rerun for the affected cases.
 
@@ -54,7 +43,7 @@ Shared settings live in [`experiment_protocol.py`](experiment_protocol.py). Save
 | Bootstrap replicates | `2000` |
 | Image size | 1024 pixels on the longer side |
 | Click counts | 1, 2, and 3 positive clicks |
-| Ground truth | At least 4 of 7 raters |
+| Ground truth | Dataset-specific rule stored in the dataset protocol |
 | Mask and score | Token 0 and its matching predicted-IoU score |
 
 ## Current native-score results
@@ -66,7 +55,7 @@ For every case the clipped model score \(q_i\) is compared against the observed 
 - **Signed bias** equals the average of \(q_i-y_i\). A positive value means the score exceeds the observed IoU.
 - **Coarse ECE** equals the weighted average absolute gap between the score and observed IoU means across ten equal-width bins between 0 and 1.
 
-MAE and signed bias are accompanied by percentile 95% confidence intervals obtained from 2,000 case-bootstrap samples. Confidence intervals for paired differences between the models are not reported. The table below lists native-score results for the 100 evaluation cases stored in [`runs/refuge2/native_summary.json`](runs/refuge2/native_summary.json). These scores have not been calibrated.
+MAE and signed bias have percentile 95% confidence intervals from 2,000 bootstrap repetitions. PAPILA resamples its 61 evaluation patients and includes both eyes each time a patient is drawn. Other datasets resample individual cases. Paired method comparisons use the same draws. Confidence intervals for paired differences between the models are not reported. The table below lists native-score results for the 100 REFUGE evaluation cases stored in [`runs/refuge2/native_summary.json`](runs/refuge2/native_summary.json). These scores have not been calibrated.
 
 | Model | Clicks | MAE (95% CI) | Signed bias (95% CI) | Coarse ECE |
 | --- | ---: | ---: | ---: | ---: |
@@ -77,7 +66,7 @@ MAE and signed bias are accompanied by percentile 95% confidence intervals obtai
 | Med-SA adapter | 2 | 0.142 (0.112–0.175) | +0.105 (+0.070–+0.143) | 0.113 |
 | Med-SA adapter | 3 | 0.089 (0.068–0.114) | +0.028 (−0.001–+0.059) | 0.056 |
 
-In the present run both models showed declines in MAE, bias, and ECE as more clicks were added and the decline was larger for Med-SA. These figures do not reveal whether calibration transfers across click settings or how the models would perform on independent data.
+On REFUGE both models showed declines in MAE, bias and ECE as more clicks were added and the decline was larger for Med-SA. These native-score figures alone do not establish calibration transfer or performance on independent data. Full results are saved in [`runs/refuge2/`](runs/refuge2/), [`runs/papila/`](runs/papila/) and [`runs/rim_one_dl/`](runs/rim_one_dl/).
 
 Inference was executed on an RTX 5080 GPU. The saved summary originates from a later rerun that reused all 400 cached predictions and therefore captures neither GPU use nor inference time. The inference metadata stores the checkpoint hashes, the dataset archive hash, and the inference-script hash.
 
@@ -109,7 +98,7 @@ The dataset and the checkpoints are not included in this repository. On startup 
 | `OpticDisc_Fundus_SAM_1024.pth` | `data/checkpoints/` | [Med-SA adapter](https://huggingface.co/KidsWithTokens/Medical-Adapter-Zoo/resolve/main/OpticDisc_Fundus_SAM_1024.pth) | `a1e39b25aa17e71fe18a6776bd771fc862b7d28c7562e574646473effdff1af1` |
 | `REFUGE-Multirater.zip` | `data/downloads/`, unpacked to `data/refuge2/` | [REFUGE data](https://huggingface.co/datasets/realslimman/REFUGE-MultiRater/resolve/main/REFUGE-Multirater.zip) | Recorded in the run metadata |
 
-Drishti-GS1 requires a registered download so its files and `case_manifest.csv` must be placed by hand in `data/drishti_gs1/`.
+PAPILA and RIM-ONE DL also download automatically into `data/downloads/` and unpack into `data/papila/` and `data/rim_one_dl/`. Their sources and mask rules are stored in [`experiment_protocol.py`](experiment_protocol.py). RIM-ONE forbids redistribution of its data, so its cached prediction files containing reference masks are also Git-ignored.
 
 The REFUGE data should contain one `Test-400` folder with 400 cases. Each case needs a `.jpg` image and seven masks named `<case_id>_seg_disc_<rater>.png`. The runner checks the number of cases and the checkpoint hashes against the protocol.
 
@@ -117,18 +106,13 @@ Run one dataset at a time. Each dataset writes to `runs/<dataset_id>/`:
 
 ```bash
 .venv/bin/python run_experiment.py --dataset-id refuge2
-.venv/bin/python run_experiment.py --dataset-id drishti_gs1
+.venv/bin/python run_experiment.py --dataset-id papila
+.venv/bin/python run_experiment.py --dataset-id rim_one_dl
 ```
 
-Running the same command again reuses every saved prediction that still matches and runs inference only for missing or changed cases. It always rebuilds the analysis files from the saved predictions. It recalculates observed IoU from the saved masks and consensus masks and does not fit or apply calibration.
+Running the same command again reuses every saved prediction that still matches and runs inference only for missing or changed cases. It rebuilds the native-score analysis and both group calibration analyses. Corrections are fitted within each dataset, not transferred between datasets.
 
 ## Code and output files
-
-| File | Saved to | Source | SHA-256 |
-| --- | --- | --- | --- |
-| `sam_vit_b_01ec64.pth` | `data/checkpoints/` | [SAM ViT-B checkpoint](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth) | `ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912` |
-| `OpticDisc_Fundus_SAM_1024.pth` | `data/checkpoints/` | [Med-SA adapter](https://huggingface.co/KidsWithTokens/Medical-Adapter-Zoo/resolve/main/OpticDisc_Fundus_SAM_1024.pth) | `a1e39b25aa17e71fe18a6776bd771fc862b7d28c7562e574646473effdff1af1` |
-| `REFUGE-Multirater.zip` | `data/downloads/`, unpacked to `data/refuge2/` | [REFUGE data](https://huggingface.co/datasets/realslimman/REFUGE-MultiRater/resolve/main/REFUGE-Multirater.zip) | Recorded in the run metadata |
 
 Each inference run contains:
 
@@ -136,23 +120,23 @@ Each inference run contains:
 - `metadata.json` with the protocol, checkpoint hashes, and exposure note.
 - `predictions/<case_id>.npz` with the consensus mask, clicks, model masks and scores, and case details.
 
-The analysis produces `shared_case_results.csv`, `native_case_results.csv`, `native_metrics.csv`, `native_reliability.png`, and `native_summary.json`. Keep the analysis and inference outputs together. The results shown in the table above come from the saved `native_summary.json`.
+The native analysis produces `shared_case_results.csv`, `native_case_results.csv`, `native_metrics.csv`, `native_reliability.png` and `native_summary.json`. Group outputs go in `member4_analysis/` and `pooled_vs_separate/` inside the same run folder. They include fitted corrections, metrics, paired comparisons and analysis settings.
 
 The metadata records the inference-script hash yet does not record the full Git working tree or a complete package lockfile. When results are shared the Git commit, any local changes, and the installed package versions should also be recorded. This project does not train a model so no training time needs to be reported.
 
-## Planned calibration analysis
+## Calibration analyses
 
-We have not implemented calibration yet. The planned method fits a straight-line correction and clips the result to the range from 0 to 1:
+The linear method fits a straight-line correction by least squares and clips the result to the range from 0 to 1:
 
 $$
 \hat{y} = \operatorname{clip}(a q + b, 0, 1)
 $$
 
-where \(q\) is the model's predicted-IoU score and \(y\) is the observed mask IoU.
+Here \(q\) is the clipped native predicted-IoU score, \(a\) and \(b\) are fitted coefficients and \(\hat{y}\) is the corrected score. The fitting target \(y\) is observed mask IoU.
 
-For each model we will fit one correction on the `calibration_fit` cases at each click count (one, two, and three clicks). Then we will apply each correction to all three click counts which gives a 3 × 3 table of fit and target click counts. We will compare the results with the uncorrected scores and with a baseline that always predicts the calibration-set mean.
+[`member4_analysis.py`](member4_analysis.py) compares per-click linear corrections with native scores and calibration means. It measures one-to-three-click transfer and supports paired click-rule comparisons. [`pooled_vs_separate.py`](pooled_vs_separate.py) compares pooled and per-click linear corrections with budget-matched and one/three-click controls.
 
-We will use the `validation` cases only to choose methods or settings. We will not use evaluation cases to fit or choose a method. Before drawing conclusions about the research question we still need to implement the calibration analysis and compare paired results. We will report uncertainty for those comparisons when it helps answer the question.
+Both analyses use calibration-fit and evaluation cases, leaving validation unused. Bootstrap intervals hold corrections fixed. The isotonic transfer script is not present locally.
 
 ## Sources
 

@@ -2027,7 +2027,7 @@
   "sampling_seed": 1,
   "partition_seed": 1,
   "model_seed": 1,
-  "ground_truth": "Pixelwise majority vote from seven raters. Mark a pixel as foreground when at least four raters do.",
+  "ground_truth": "Use the seven rater masks. A pixel belongs to the optic disc when at least four raters include it.",
   "gpu": "not used (predictions cached)",
   "measurements": {
     "base_sam": {
@@ -2040,5 +2040,10 @@
     }
   },
   "prompt_rule": "Choose positive clicks from the consensus mask. The first click is the foreground pixel farthest from the boundary. Each later click is the remaining foreground pixel farthest from the earlier clicks. Smaller prompts use the first points of the three-click prompt.",
+  "prompt_settings": {
+    "rule": "distance",
+    "seed": 1,
+    "description": "Choose positive clicks from the consensus mask. The first click is the foreground pixel farthest from the boundary. Each later click is the remaining foreground pixel farthest from the earlier clicks. Smaller prompts use the first points of the three-click prompt."
+  },
   "mask_selection": "Use the output from mask token 0 and its matching predicted-IoU score."
 }

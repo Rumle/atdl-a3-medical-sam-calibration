@@ -4,6 +4,7 @@ import importlib.metadata
 import json
 import platform
 import subprocess
+import sys
 from pathlib import Path
 
 import torch
@@ -18,7 +19,6 @@ from experiment_protocol import (
 )
 from dataset_io import (
     DATA_DIR,
-    DATASET_GROUND_TRUTH_RULES,
     DatasetCase,
     discover_dataset_cases,
     download,
@@ -36,7 +36,6 @@ from shared_inference import (
 
 PROJECT_DIR = Path(__file__).resolve().parent
 DEFAULT_ASSET_DIR = DATA_DIR / "checkpoints"
-DATASET_ARCHIVE = DATA_DIR / "downloads" / PROTOCOL.dataset_archive_name
 CACHE_SCHEMA_VERSION = 1
 
 
@@ -438,7 +437,7 @@ def write_shared_predictions(
         "sampling_seed": sampling_seed,
         "partition_seed": split_seed,
         "model_seed": PROTOCOL.model_seed,
-        "ground_truth": DATASET_GROUND_TRUTH_RULES[dataset_id],
+        "ground_truth": dataset_protocol.ground_truth_rule,
         "gpu": (
             torch.cuda.get_device_name(device)
             if sampled_cases
@@ -468,11 +467,11 @@ def write_shared_predictions(
             "role_counts": summary["role_counts"],
         },
         "selected_case_ids": selected_ids,
-        "dataset_archive_sha256": (
-            sha256_file(DATASET_ARCHIVE)
-            if dataset_id == "refuge2" and DATASET_ARCHIVE.is_file()
-            else None
-        ),
+        "dataset_archives_sha256": {
+            name: sha256_file(DATA_DIR / "downloads" / name)
+            for name, _ in dataset_protocol.downloads
+            if (DATA_DIR / "downloads" / name).is_file()
+        },
         "base_checkpoint_sha256": base_checkpoint_sha256,
         "adapter_checkpoint_sha256": adapter_checkpoint_sha256,
         "base_checkpoint_path": str(base_path.resolve()),
@@ -505,8 +504,7 @@ def main() -> None:
             "predicted-IoU scores match observed IoU."
         ),
         epilog=(
-            "Drishti-GS1 uses case_manifest.csv with case_id, source_pool, "
-            "image_path, and optic_disc_mask columns. Its masks must be binary. "
+            "Public datasets and checkpoints download into data/ automatically. "
             "A case-count cap applies separately to each source pool."
         ),
     )
@@ -562,6 +560,30 @@ def main() -> None:
         run_dir,
         replicates=PROTOCOL.bootstrap_replicates,
         seed=PROTOCOL.bootstrap_seed,
+    )
+    subprocess.run(
+        [
+            sys.executable, str(PROJECT_DIR / "member4_analysis.py"),
+            "--alternative", str(run_dir / "shared_case_results.csv"),
+            "--output-dir", str(run_dir / "member4_analysis"),
+        ],
+        check=True,
+    )
+    subprocess.run(
+        [
+            sys.executable, str(PROJECT_DIR / "pooled_vs_separate.py"),
+            "--dataset-id", args.dataset_id, "--run-dir", str(run_dir),
+        ],
+        check=True,
+    )
+    subprocess.run(
+        [
+            sys.executable, str(PROJECT_DIR / "transfer_calibration.py"),
+            "--dataset-id", args.dataset_id,
+            "--results-csv", str(run_dir / "shared_case_results.csv"),
+            "--out-dir", str(run_dir / "transfer_calibration" / "fit1"),
+        ],
+        check=True,
     )
     for row in result["metrics"]:
         print(

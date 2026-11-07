@@ -5,10 +5,19 @@ import json
 from pathlib import Path
 
 import numpy as np
+from bootstrap import bootstrap_indices, bootstrap_unit, dataset_id_from_rows
 
 MODELS = ('base_sam', 'med_sa_adapter')
 CLICKS = (1, 2, 3)
-EVAL = 'internal_evaluation_overlap_risk'
+
+
+def evaluation_role(rows):
+    roles = {row['analysis_role'] for row in rows}
+    if 'final_test' in roles:
+        return 'final_test'
+    if 'internal_evaluation_overlap_risk' in roles:
+        return 'internal_evaluation_overlap_risk'
+    raise ValueError('No evaluation role: expected final_test or internal_evaluation_overlap_risk')
 
 
 def read_rows(path):
@@ -67,12 +76,17 @@ def metrics(q, y):
                 bias=float(e.mean()), coarse_ece=float(ece))
 
 
-def interval(values, replicates=2000, seed=1):
+def interval(values, replicates=2000, seed=1, case_ids=None, dataset_id=None):
     if replicates < 1:
         raise ValueError('replicates must be positive')
-    rng = np.random.default_rng(seed)
-    estimates = [rng.choice(values, len(values), replace=True).mean()
-                 for _ in range(replicates)]
+    if case_ids is None:
+        case_ids = [str(index) for index in range(len(values))]
+    if len(case_ids) != len(values):
+        raise ValueError('Case IDs must match the bootstrap values')
+    estimates = [
+        values[indices].mean()
+        for indices in bootstrap_indices(case_ids, dataset_id, replicates, seed)
+    ]
     lo, hi = np.quantile(estimates, [.025, .975])
     return float(lo), float(hi)
 
@@ -85,6 +99,8 @@ def write_csv(path, rows):
 
 
 def analyze(rows, output, replicates=2000, seed=1):
+    eval_role = evaluation_role(rows)
+    dataset_id = dataset_id_from_rows(rows)
     output = Path(output)
     output.mkdir(parents=True, exist_ok=True)
     fits, summaries, predictions, gaps = [], [], [], []
@@ -97,7 +113,7 @@ def analyze(rows, output, replicates=2000, seed=1):
             fits.append(dict(model=model, fit_clicks=fit_clicks, cases=len(q),
                              a=a, b=b, mean_baseline=float(y.mean())))
         for target in CLICKS:
-            ids, q, y = select(rows, model, target, EVAL)
+            ids, q, y = select(rows, model, target, eval_role)
             summaries.append(dict(model=model, fit_clicks='', target_clicks=target,
                                   method='native', cases=len(q), **metrics(q, y)))
             for fit_clicks, (a, b, mean) in functions.items():
@@ -127,18 +143,24 @@ def analyze(rows, output, replicates=2000, seed=1):
     write_csv(output/'transfer_gap_cases.csv', gaps)
     report = []
     for model in MODELS:
-        values = np.array([r['gap'] for r in gaps if r['model'] == model])
-        lo, hi = interval(values, replicates, seed)
+        selected = [r for r in gaps if r['model'] == model]
+        values = np.array([r['gap'] for r in selected])
+        lo, hi = interval(values, replicates, seed,
+                          [r['case_id'] for r in selected], dataset_id)
         report.append(dict(model=model, mean_transfer_gap=float(values.mean()),
                            ci_low=lo, ci_high=hi, cases=len(values)))
     write_csv(output/'transfer_gap_summary.csv', report)
     (output/'analysis_settings.json').write_text(json.dumps({
-        'fit_role': 'calibration_fit', 'evaluation_role': EVAL,
+        'fit_role': 'calibration_fit', 'evaluation_role': eval_role,
         'method': 'OLS on clipped native score, then clip output to [0,1]',
         'validation': 'Not used: method fixed in advance; no model selection performed',
         'mean_baseline': 'Mean actual IoU of the source click-count calibration cases',
         'bootstrap_replicates': replicates, 'bootstrap_seed': seed,
-        'uncertainty': 'Paired evaluation-case bootstrap conditional on fixed fitted corrections; excludes fitting uncertainty',
+        'bootstrap_unit': bootstrap_unit(dataset_id),
+        'uncertainty': (
+            f'Paired evaluation-{bootstrap_unit(dataset_id)} bootstrap with '
+            'fixed fitted corrections. Fitting uncertainty is not included.'
+        ),
         'limitation': 'Independence from checkpoint development is unverified',
     }, indent=2)+'\n')
     return gaps, predictions
@@ -156,8 +178,11 @@ def compare(original, alternative, output, replicates, seed):
     lookup = {(r['case_id'], r['model']): r['gap'] for r in ga}
     reports = []
     for model in MODELS:
-        values = np.array([r['gap']-lookup[(r['case_id'], model)] for r in gb if r['model'] == model])
-        lo, hi = interval(values, replicates, seed)
+        selected = [r for r in gb if r['model'] == model]
+        values = np.array([r['gap']-lookup[(r['case_id'], model)] for r in selected])
+        lo, hi = interval(values, replicates, seed,
+                          [r['case_id'] for r in selected],
+                          dataset_id_from_rows(alternative))
         reports.append(dict(model=model, alternative_minus_original_gap=float(values.mean()),
                             ci_low=lo, ci_high=hi, cases=len(values)))
     write_csv(output/'paired_rule_comparison.csv', reports)
