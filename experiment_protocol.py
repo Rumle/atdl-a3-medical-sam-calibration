@@ -1,3 +1,4 @@
+import hashlib
 from dataclasses import asdict, dataclass
 
 import numpy as np
@@ -248,13 +249,34 @@ def split_case_ids(
     return calibration, evaluation
 
 
-def prompt_clicks(mask: np.ndarray, count: int) -> np.ndarray:
+def prompt_clicks(
+    mask: np.ndarray, count: int, rule: str = "distance", seed: int = 1,
+    case_id: str = "",
+) -> np.ndarray:
     """Choose nested positive points from the ground-truth mask using the fixed distance rule."""
     mask = np.asarray(mask, dtype=bool)
     if mask.ndim != 2 or not mask.any():
         raise ValueError("The click mask must be a non-empty 2D foreground mask.")
     if count < 1 or count > int(mask.sum()):
         raise ValueError("count must be between one and the number of foreground pixels.")
+
+    if rule not in ("distance", "random_foreground"):
+        raise ValueError(f"Unknown prompt rule: {rule}")
+    if rule == "random_foreground":
+        if not case_id:
+            raise ValueError("Random prompts require a stable case ID.")
+        # Stable across processes and independent of case ordering and role.
+        digest = hashlib.sha256(f"{seed}:{case_id}".encode()).digest()
+        rng = np.random.default_rng(int.from_bytes(digest[:16], "little"))
+        foreground = np.flatnonzero(mask)
+        # Repeated draws preserve prefixes even if count changes.
+        selected = []
+        for _ in range(count):
+            index = int(rng.integers(len(foreground)))
+            selected.append(foreground[index])
+            foreground = np.delete(foreground, index)
+        ys, xs = np.unravel_index(selected, mask.shape)
+        return np.column_stack((xs, ys)).astype(np.int64)
 
     boundary_distance = distance_transform_edt(mask)
     first_flat = int(np.argmax(boundary_distance))

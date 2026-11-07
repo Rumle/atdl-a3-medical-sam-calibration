@@ -187,7 +187,9 @@ def discover_dataset_cases(
     return discover(Path(data_dir))
 
 
-def load_dataset_case(case: DatasetCase) -> shared_inference.CaseData:
+def load_dataset_case(
+    case: DatasetCase, prompt_rule: str = "distance", prompt_seed: int = 1,
+) -> shared_inference.CaseData:
     if not case.mask_paths or not 1 <= case.required_votes <= len(case.mask_paths):
         raise ValueError(f"Invalid mask vote rule for {case.case_id}.")
 
@@ -203,5 +205,8 @@ def load_dataset_case(case: DatasetCase) -> shared_inference.CaseData:
     ground_truth = np.stack(masks).sum(axis=0) >= case.required_votes
     if image.shape[:2] != ground_truth.shape:
         raise ValueError(f"Image and mask dimensions disagree for {case.case_id}.")
-    clicks = prompt_clicks(ground_truth, count=max(PROTOCOL.click_counts))
+    clicks = prompt_clicks(
+        ground_truth, count=max(PROTOCOL.click_counts), rule=prompt_rule,
+        seed=prompt_seed, case_id=case.case_id,
+    )
     return shared_inference.CaseData(case.case_id, image, ground_truth, clicks)

@@ -265,6 +265,8 @@ def write_shared_predictions(
     sampling_seed: int,
     split_seed: int,
     dataset_id: str = PROTOCOL.dataset_id,
+    prompt_rule: str = "distance",
+    prompt_seed: int = 1,
 ) -> dict[str, object]:
     base_path = asset_dir / PROTOCOL.base_checkpoint_name
     adapter_path = asset_dir / PROTOCOL.adapter_checkpoint_name
@@ -349,6 +351,17 @@ def write_shared_predictions(
         base_checkpoint_sha256,
         adapter_checkpoint_sha256,
     )
+    if prompt_rule not in ("distance", "random_foreground"):
+        raise ValueError(f"Unknown prompt rule: {prompt_rule}")
+    prompt_settings = {
+        "rule": prompt_rule, "seed": prompt_seed,
+        "description": PROTOCOL.prompt_rule if prompt_rule == "distance" else (
+            "Uniform positive foreground sampling without replacement; nested "
+            "clicks, stable per-case seed, identical points for both models."
+        ),
+    }
+    # Top-level field is retained by _case_cache_fingerprints.
+    cache_identity["prompt_settings"] = prompt_settings
     case_fingerprints = _case_cache_fingerprints(cache_identity, case_by_id)
     cached_case_ids, prediction_cache = _load_cached_case_ids(
         output_dir, case_fingerprints, cache_identity
@@ -361,7 +374,8 @@ def write_shared_predictions(
         f"running inference for {len(missing_ids)} new or changed case(s)."
     )
     sampled_cases = [
-        load_dataset_case(case_by_id[case_id]) for case_id in missing_ids
+        load_dataset_case(case_by_id[case_id], prompt_rule, prompt_seed)
+        for case_id in missing_ids
     ]
     evaluation_role = (
         "final_test"
@@ -431,7 +445,8 @@ def write_shared_predictions(
             else "not used (predictions cached)"
         ),
         "measurements": measurements,
-        "prompt_rule": PROTOCOL.prompt_rule,
+        "prompt_rule": prompt_settings["description"],
+        "prompt_settings": prompt_settings,
         "mask_selection": PROTOCOL.mask_selection,
     }
     with (output_dir / "summary.json").open("w") as file:
@@ -439,7 +454,9 @@ def write_shared_predictions(
         file.write("\n")
 
     metadata = {
-        "protocol": {**PROTOCOL.as_dict(), "dataset_id": dataset_id},
+        "protocol": {**PROTOCOL.as_dict(), "dataset_id": dataset_id,
+                     "prompt_rule": prompt_settings["description"]},
+        "prompt_settings": prompt_settings,
         "dataset_protocol": dataset_protocol.as_dict(),
         "adapter_exposure_status": dataset_protocol.adapter_exposure_status,
         "run": {
@@ -506,6 +523,9 @@ def main() -> None:
     )
     parser.add_argument("--sampling-seed", type=int, default=PROTOCOL.sampling_seed)
     parser.add_argument("--split-seed", type=int, default=PROTOCOL.split_seed)
+    parser.add_argument("--prompt-rule", choices=("distance", "random_foreground"),
+                        default="distance")
+    parser.add_argument("--prompt-seed", type=int, default=1)
     args = parser.parse_args()
 
     data_dir = args.data_dir or DATA_DIR / args.dataset_id
@@ -517,7 +537,12 @@ def main() -> None:
         PROTOCOL.adapter_checkpoint_url,
         args.asset_dir / PROTOCOL.adapter_checkpoint_name,
     )
-    run_dir = args.run_dir or PROJECT_DIR / "runs" / args.dataset_id
+    default_run = PROJECT_DIR / "runs" / args.dataset_id
+    if args.prompt_rule != "distance":
+        default_run = PROJECT_DIR / "runs" / (
+            f"{args.dataset_id}_{args.prompt_rule}_seed{args.prompt_seed}"
+        )
+    run_dir = args.run_dir or default_run
     run_dir = run_dir.resolve()
     inference_dir = run_dir / "inference"
     write_shared_predictions(
@@ -528,6 +553,8 @@ def main() -> None:
         args.sampling_seed,
         args.split_seed,
         args.dataset_id,
+        args.prompt_rule,
+        args.prompt_seed,
     )
 
     result = analyze_predictions(
