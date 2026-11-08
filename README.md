@@ -134,7 +134,7 @@ $$
 
 Here \(q\) is the clipped native predicted-IoU score, \(a\) and \(b\) are fitted coefficients and \(\hat{y}\) is the corrected score. The fitting target \(y\) is observed mask IoU.
 
-[`member4_analysis.py`](member4_analysis.py) compares per-click linear corrections with native scores and calibration means. It measures one-to-three-click transfer and supports paired click-rule comparisons. [`pooled_vs_separate.py`](pooled_vs_separate.py) compares pooled and per-click linear corrections with budget-matched and one/three-click controls.
+[`member4_analysis.py`](member4_analysis.py) compares per-click linear corrections with native scores and calibration means. It measures one-to-three-click transfer and supports paired click-rule comparisons.    [`pooled_vs_separate.py`](pooled_vs_separate.py) compares per-click (separate), pooled and shared-slope (one slope, one intercept per click count) linear corrections, with budget-matched and one/three-click controls. Run it with `.venv/bin/python pooled_vs_separate.py --dataset-id refuge2` (likewise `papila`, `rim_one_dl`); it needs only the saved `shared_case_results.csv`, no GPU.
 
 Both analyses use calibration-fit and evaluation cases, leaving validation unused. Bootstrap intervals hold corrections fixed. The isotonic transfer script is not present locally.
 
