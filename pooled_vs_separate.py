@@ -17,13 +17,13 @@ import csv
 import json
 from pathlib import Path
 
-import matplotlib.pyplot as plt
 import numpy as np
 
 from experiment_protocol import PROTOCOL
 from bootstrap import bootstrap_indices, bootstrap_unit, dataset_id_from_rows
 from member4_analysis import evaluation_role
 from native_reliability import regression_metrics
+from figure_plotting import plot_pooled_metrics
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--dataset-id", default="refuge2")
@@ -165,35 +165,7 @@ for m in MODELS:
 lines += [r"\bottomrule", r"\end{tabular}"]
 (out_dir / "table_mae_bias.tex").write_text("\n".join(lines) + "\n")
 
-# Figure: MAE and signed bias with 95% bootstrap CI per click count, one column per model.
-colors = {"native": "#8a8a85", "separate": "#2a78d6", "pooled": "#eb6834", "shared_slope": "#1baf7a"}
-markers = {"native": "s", "separate": "o", "pooled": "^", "shared_slope": "D"}
-names = {"native": "Native", "separate": "Separate", "pooled": "Pooled", "shared_slope": "Shared slope"}
-fig, axes = plt.subplots(2, 2, figsize=(7.2, 5.0), sharex=True, sharey="row")
-for col, m in enumerate(MODELS):
-    for row, stat in enumerate(("mae", "bias")):
-        ax = axes[row, col]
-        for i, meth in enumerate(methods):
-            x = np.array(CLICKS) + (i - 1.5) * 0.09
-            r = [get[m, k, meth] for k in CLICKS]
-            val = np.array([v[stat] for v in r])
-            err = np.array([[v[stat] - v[f"{stat}_ci_low"] for v in r], [v[f"{stat}_ci_high"] - v[stat] for v in r]])
-            ax.errorbar(x, val, yerr=err, color=colors[meth], marker=markers[meth], markersize=6,
-                        linewidth=2, capsize=0, elinewidth=1.2, label=names[meth])
-        ax.grid(axis="y", alpha=0.25)
-        ax.spines[["top", "right"]].set_visible(False)
-        if stat == "bias":
-            ax.axhline(0, color="black", linewidth=0.8)
-            ax.set_xlabel("Number of clicks $k$")
-    axes[0, col].set_title(label[m])
-axes[1, 0].set_xticks(CLICKS)
-axes[0, 0].set_ylabel("MAE")
-axes[0, 0].set_ylim(bottom=0)
-axes[1, 0].set_ylabel("Signed bias (score $-$ IoU)")
-axes[0, 1].legend(frameon=False, fontsize=8)
-fig.tight_layout()
-fig.savefig(out_dir / "mae_by_click.png", dpi=300)
-fig.savefig(out_dir / "mae_by_click.pdf")
+plot_pooled_metrics(metric_rows, out_dir, scale=1.5)
 
 json.dump({"dataset_id": args.dataset_id, "fit_role": FIT, "evaluation_role": EVAL,
            "bootstrap_unit": bootstrap_unit(dataset_id),

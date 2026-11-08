@@ -8,6 +8,7 @@ import numpy as np
 
 from experiment_protocol import PROTOCOL
 from bootstrap import bootstrap_indices, bootstrap_unit, dataset_id_from_rows
+from figure_plotting import save_report_figure
 
 
 MODELS = ("base_sam", "med_sa_adapter")
@@ -330,13 +331,14 @@ def plot_reliability(
         if means:
             mean_scores, mean_targets = np.asarray(means).T
             axis.plot(mean_scores, mean_targets, "o-", color="tab:blue")
-        axis.set_title(f"{model.replace('_', ' ')}, {click_count} click(s)")
+        axis.set_title(f"{model.replace('_', ' ')}\n{click_count} click(s)", pad=58)
         axis.text(
-            0.04,
-            0.96,
-            f"MAE {row['mae']:.3f}  bias {row['bias']:+.3f}",
+            0.5,
+            1.03,
+            f"MAE {row['mae']:.3f}\nbias {row['bias']:+.3f}",
             transform=axis.transAxes,
-            va="top",
+            va="bottom",
+            ha="center",
         )
         axis.set_xlim(0, 1)
         axis.set_ylim(0, 1)
@@ -345,9 +347,7 @@ def plot_reliability(
         axis.set_xlabel("Mean predicted IoU")
     for axis in axes[:, 0]:
         axis.set_ylabel("Mean observed IoU")
-    figure.tight_layout()
-    figure.savefig(path, dpi=180)
-    plt.close(figure)
+    save_report_figure(figure, [Path(path)], dpi=180, scale=1.8)
 
 
 def analyze_predictions(

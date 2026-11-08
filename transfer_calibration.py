@@ -55,6 +55,7 @@ from bootstrap import bootstrap_indices, bootstrap_unit, dataset_id_from_rows
 from experiment_protocol import DATASET_PROTOCOLS, PROTOCOL
 from member4_analysis import evaluation_role, fit_line, read_rows, select
 from native_reliability import regression_metrics
+from figure_plotting import save_report_figure
 
 FIT_ROLE = "calibration_fit"
 CORRECTIONS = ("constant", "linear", "isotonic")
@@ -226,18 +227,19 @@ def plot_reliability(plot_data, targets, args, out_dir):
                     ax.plot(*zip(*pts), styles[label], ms=3.5, lw=1, label=label)
             ax.set_xlim(0, 1)
             ax.set_ylim(0, 1)
-            ax.set_title(f"{MODEL_LABELS[model]}, {k} click(s)", fontsize=8)
-            ax.set_xlabel("Mean predicted score (bin)", fontsize=8)
-            ax.set_ylabel("Mean observed IoU (bin)", fontsize=8)
+            ax.set_title(f"{MODEL_LABELS[model]}\n{k} click(s)", fontsize=8)
+            if i == len(PROTOCOL.models) - 1:
+                ax.set_xlabel("Mean predicted\nscore (bin)", fontsize=8)
+            if j == 0:
+                ax.set_ylabel("Mean observed\nIoU (bin)", fontsize=8)
             ax.tick_params(labelsize=7)
     axes[0][0].legend(fontsize=6, loc="upper left")
     fig.suptitle(
-        f"Corrections fitted at {args.fit_click} click(s), frozen; bins with >= {args.min_bin_count} cases",
+        f"Corrections fitted at {args.fit_click} click(s), frozen\n"
+        f"bins with >= {args.min_bin_count} cases",
         fontsize=8,
     )
-    fig.tight_layout()
-    fig.savefig(out_dir / "transfer_reliability.png", dpi=200)
-    plt.close(fig)
+    save_report_figure(fig, [out_dir / "transfer_reliability.png"], dpi=200, scale=1.8)
 
 
 def print_summary(out_dir, result_rows, comparison_rows):

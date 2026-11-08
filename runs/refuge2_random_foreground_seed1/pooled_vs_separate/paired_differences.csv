@@ -7,6 +7,10 @@ base_sam,1,pooled_13 - separate,0.00775949,-0.0103833,0.0265481,0.2095
 base_sam,2,pooled_13 - separate,-0.00348293,-0.0125556,0.00536148,0.7775
 base_sam,3,pooled_13 - separate,0.0171838,0.000837243,0.0328447,0.0155
 base_sam,mean,pooled_13 - separate,0.00715346,0.00160968,0.0124515,0.005
+base_sam,1,shared_slope - separate,-0.006378,-0.0154122,0.00220901,0.921
+base_sam,2,shared_slope - separate,-0.00149806,-0.00569706,0.00239269,0.766
+base_sam,3,shared_slope - separate,0.000707065,-0.0046386,0.00589617,0.4155
+base_sam,mean,shared_slope - separate,-0.00238967,-0.00615367,0.000981736,0.9075
 base_sam,1,separate - native,-0.135348,-0.209212,-0.0593629,0.9995
 base_sam,2,separate - native,-0.103753,-0.156823,-0.0482622,1
 base_sam,3,separate - native,-0.0612032,-0.108305,-0.0154431,0.9945
@@ -23,6 +27,10 @@ med_sa_adapter,1,pooled_13 - separate,-0.00829657,-0.0130583,-0.00337661,0.999
 med_sa_adapter,2,pooled_13 - separate,-0.00441194,-0.00655937,-0.00201982,1
 med_sa_adapter,3,pooled_13 - separate,0.00730287,0.0033144,0.011005,0
 med_sa_adapter,mean,pooled_13 - separate,-0.00180188,-0.00332522,-0.000208283,0.9875
+med_sa_adapter,1,shared_slope - separate,-0.00106291,-0.00271967,0.000646142,0.894
+med_sa_adapter,2,shared_slope - separate,0.000196766,2.81768e-05,0.000356216,0.0165
+med_sa_adapter,3,shared_slope - separate,0.00204567,-6.0973e-05,0.00386983,0.0295
+med_sa_adapter,mean,shared_slope - separate,0.000393176,-0.000404812,0.00109639,0.156
 med_sa_adapter,1,separate - native,0.0124476,-0.00610175,0.0307502,0.0985
 med_sa_adapter,2,separate - native,0.00365109,-0.0127988,0.0186044,0.31
 med_sa_adapter,3,separate - native,-0.00750933,-0.0195612,0.0041149,0.9055

@@ -48,6 +48,30 @@
       "fit_cases": 366
     },
     {
+      "model": "base_sam",
+      "method": "shared_slope",
+      "fit_click_count": 1,
+      "slope_a": 0.15822825631030474,
+      "intercept_b": 0.3777467487767867,
+      "fit_cases": 366
+    },
+    {
+      "model": "base_sam",
+      "method": "shared_slope",
+      "fit_click_count": 2,
+      "slope_a": 0.15822825631030474,
+      "intercept_b": 0.3706972002733424,
+      "fit_cases": 366
+    },
+    {
+      "model": "base_sam",
+      "method": "shared_slope",
+      "fit_click_count": 3,
+      "slope_a": 0.15822825631030474,
+      "intercept_b": 0.35479145046531085,
+      "fit_cases": 366
+    },
+    {
       "model": "med_sa_adapter",
       "method": "separate",
       "fit_click_count": 1,
@@ -85,6 +109,30 @@
       "fit_click_count": "1,3",
       "slope_a": 0.2530862162887309,
       "intercept_b": 0.37486515152981836,
+      "fit_cases": 366
+    },
+    {
+      "model": "med_sa_adapter",
+      "method": "shared_slope",
+      "fit_click_count": 1,
+      "slope_a": 0.18334262111815738,
+      "intercept_b": 0.41696719340777877,
+      "fit_cases": 366
+    },
+    {
+      "model": "med_sa_adapter",
+      "method": "shared_slope",
+      "fit_click_count": 2,
+      "slope_a": 0.18334262111815738,
+      "intercept_b": 0.43804928609692634,
+      "fit_cases": 366
+    },
+    {
+      "model": "med_sa_adapter",
+      "method": "shared_slope",
+      "fit_click_count": 3,
+      "slope_a": 0.18334262111815738,
+      "intercept_b": 0.44824173661693384,
       "fit_cases": 366
     }
   ],
@@ -160,6 +208,42 @@
       "ci_low": -0.005213809570741218,
       "ci_high": 0.005177298820280883,
       "p_boot_le_0": 0.4805
+    },
+    {
+      "model": "base_sam",
+      "click_count": 1,
+      "comparison": "shared_slope - separate",
+      "mae_difference": 0.0010482821647156237,
+      "ci_low": -0.007634845400546923,
+      "ci_high": 0.009648265446776673,
+      "p_boot_le_0": 0.4085
+    },
+    {
+      "model": "base_sam",
+      "click_count": 2,
+      "comparison": "shared_slope - separate",
+      "mae_difference": 0.00043899332564457006,
+      "ci_low": -0.0010018551481186606,
+      "ci_high": 0.0018953694206818043,
+      "p_boot_le_0": 0.2765
+    },
+    {
+      "model": "base_sam",
+      "click_count": 3,
+      "comparison": "shared_slope - separate",
+      "mae_difference": -0.00013119748860903485,
+      "ci_low": -0.011162600963129675,
+      "ci_high": 0.010569668810132216,
+      "p_boot_le_0": 0.5175
+    },
+    {
+      "model": "base_sam",
+      "click_count": "mean",
+      "comparison": "shared_slope - separate",
+      "mae_difference": 0.0004520260005837202,
+      "ci_low": -0.004872785443802297,
+      "ci_high": 0.005530444393234917,
+      "p_boot_le_0": 0.4345
     },
     {
       "model": "base_sam",
@@ -304,6 +388,42 @@
       "ci_low": -0.00036847952277926417,
       "ci_high": 0.005324547739230042,
       "p_boot_le_0": 0.0415
+    },
+    {
+      "model": "med_sa_adapter",
+      "click_count": 1,
+      "comparison": "shared_slope - separate",
+      "mae_difference": 0.004748180057187566,
+      "ci_low": -0.001359594321470762,
+      "ci_high": 0.010814037555738423,
+      "p_boot_le_0": 0.0635
+    },
+    {
+      "model": "med_sa_adapter",
+      "click_count": 2,
+      "comparison": "shared_slope - separate",
+      "mae_difference": -0.00021464955531705127,
+      "ci_low": -0.002745551748238856,
+      "ci_high": 0.0024693047541575813,
+      "p_boot_le_0": 0.554
+    },
+    {
+      "model": "med_sa_adapter",
+      "click_count": 3,
+      "comparison": "shared_slope - separate",
+      "mae_difference": -0.000509182741748491,
+      "ci_low": -0.0061941421910060145,
+      "ci_high": 0.005166748458090572,
+      "p_boot_le_0": 0.566
+    },
+    {
+      "model": "med_sa_adapter",
+      "click_count": "mean",
+      "comparison": "shared_slope - separate",
+      "mae_difference": 0.0013414492533740077,
+      "ci_low": -0.0007833339503501619,
+      "ci_high": 0.0035227932095259666,
+      "p_boot_le_0": 0.117
     },
     {
       "model": "med_sa_adapter",

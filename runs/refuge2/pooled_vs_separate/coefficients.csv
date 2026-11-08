@@ -4,8 +4,14 @@ base_sam,separate,2,0.224127,0.297113,300
 base_sam,separate,3,0.207303,0.324375,300
 base_sam,pooled,all,0.2759,0.239353,300
 base_sam,pooled_13,"1,3",0.305821,0.207581,300
+base_sam,shared_slope,1,0.260226,0.196425,300
+base_sam,shared_slope,2,0.260226,0.27082,300
+base_sam,shared_slope,3,0.260226,0.285016,300
 med_sa_adapter,separate,1,0.436463,0.262267,300
 med_sa_adapter,separate,2,0.537199,0.319083,300
 med_sa_adapter,separate,3,0.721274,0.213847,300
 med_sa_adapter,pooled,all,0.736415,0.126622,300
 med_sa_adapter,pooled_13,"1,3",0.820038,0.0454579,300
+med_sa_adapter,shared_slope,1,0.554794,0.169436,300
+med_sa_adapter,shared_slope,2,0.554794,0.304325,300
+med_sa_adapter,shared_slope,3,0.554794,0.355914,300
