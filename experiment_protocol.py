@@ -60,8 +60,7 @@ DATASET_PROTOCOLS = {
                 expected_cases=400,
                 annotation_access="available",
                 role_fractions=(
-                    ("calibration_fit", 0.5),
-                    ("validation", 0.25),
+                    ("calibration_fit", 0.75),
                     ("internal_evaluation_overlap_risk", 0.25),
                 ),
             ),
@@ -96,8 +95,7 @@ DATASET_PROTOCOLS = {
                 expected_cases=488,
                 annotation_access="available",
                 role_fractions=(
-                    ("calibration_fit", 0.5),
-                    ("validation", 0.25),
+                    ("calibration_fit", 0.75),
                     ("final_test", 0.25),
                 ),
             ),
@@ -126,7 +124,7 @@ DATASET_PROTOCOLS = {
                 official_name="Official random partition training set",
                 expected_cases=339,
                 annotation_access="available",
-                role_fractions=(("calibration_fit", 0.75), ("validation", 0.25)),
+                role_fractions=(("calibration_fit", 1.0),),
             ),
             DatasetPoolProtocol(
                 pool_id="test_146",

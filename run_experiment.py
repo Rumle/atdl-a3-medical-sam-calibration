@@ -431,7 +431,6 @@ def write_shared_predictions(
             role: len(case_ids) for role, case_ids in role_case_ids.items()
         },
         "calibration_count": len(role_case_ids.get("calibration_fit", [])),
-        "validation_count": len(role_case_ids.get("validation", [])),
         "evaluation_role": evaluation_role,
         "evaluation_count": len(role_case_ids.get(evaluation_role, [])),
         "sampling_seed": sampling_seed,

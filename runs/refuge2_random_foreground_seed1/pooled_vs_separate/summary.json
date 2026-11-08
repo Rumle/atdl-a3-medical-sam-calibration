@@ -1,0 +1,381 @@
+{
+  "dataset_id": "refuge2",
+  "fit_role": "calibration_fit",
+  "evaluation_role": "internal_evaluation_overlap_risk",
+  "bootstrap_unit": "case",
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 1,
+  "matched_draws": 200,
+  "coefficients": [
+    {
+      "model": "base_sam",
+      "method": "separate",
+      "fit_click_count": 1,
+      "slope_a": -0.14402615091526866,
+      "intercept_b": 0.4411010016160129,
+      "fit_cases": 300
+    },
+    {
+      "model": "base_sam",
+      "method": "separate",
+      "fit_click_count": 2,
+      "slope_a": 0.1983245622414676,
+      "intercept_b": 0.3182986219953659,
+      "fit_cases": 300
+    },
+    {
+      "model": "base_sam",
+      "method": "separate",
+      "fit_click_count": 3,
+      "slope_a": 0.24260291967725192,
+      "intercept_b": 0.323371697656778,
+      "fit_cases": 300
+    },
+    {
+      "model": "base_sam",
+      "method": "pooled",
+      "fit_click_count": "all",
+      "slope_a": 0.12417421239177395,
+      "intercept_b": 0.34606478249441996,
+      "fit_cases": 300
+    },
+    {
+      "model": "base_sam",
+      "method": "pooled_13",
+      "fit_click_count": "1,3",
+      "slope_a": 0.08512810731843722,
+      "intercept_b": 0.361229314234539,
+      "fit_cases": 300
+    },
+    {
+      "model": "med_sa_adapter",
+      "method": "separate",
+      "fit_click_count": 1,
+      "slope_a": 0.4094446398953185,
+      "intercept_b": 0.39097842085372836,
+      "fit_cases": 300
+    },
+    {
+      "model": "med_sa_adapter",
+      "method": "separate",
+      "fit_click_count": 2,
+      "slope_a": 0.4803122409237493,
+      "intercept_b": 0.347090625255974,
+      "fit_cases": 300
+    },
+    {
+      "model": "med_sa_adapter",
+      "method": "separate",
+      "fit_click_count": 3,
+      "slope_a": 0.595572913570115,
+      "intercept_b": 0.2810221833070751,
+      "fit_cases": 300
+    },
+    {
+      "model": "med_sa_adapter",
+      "method": "pooled",
+      "fit_click_count": "all",
+      "slope_a": 0.501149210579627,
+      "intercept_b": 0.3373560860413401,
+      "fit_cases": 300
+    },
+    {
+      "model": "med_sa_adapter",
+      "method": "pooled_13",
+      "fit_click_count": "1,3",
+      "slope_a": 0.5132259116453926,
+      "intercept_b": 0.3313849387057825,
+      "fit_cases": 300
+    }
+  ],
+  "paired_differences": [
+    {
+      "model": "base_sam",
+      "click_count": 1,
+      "comparison": "pooled - separate",
+      "mae_difference": 0.009919103759135246,
+      "ci_low": -0.011252339274785144,
+      "ci_high": 0.0312027266567163,
+      "p_boot_le_0": 0.19
+    },
+    {
+      "model": "base_sam",
+      "click_count": 2,
+      "comparison": "pooled - separate",
+      "mae_difference": -0.002964870258523749,
+      "ci_low": -0.009002235818666021,
+      "ci_high": 0.003061337529428095,
+      "p_boot_le_0": 0.8275
+    },
+    {
+      "model": "base_sam",
+      "click_count": 3,
+      "comparison": "pooled - separate",
+      "mae_difference": 0.01293206153824913,
+      "ci_low": -0.00047367083107205415,
+      "ci_high": 0.025924350297767972,
+      "p_boot_le_0": 0.03
+    },
+    {
+      "model": "base_sam",
+      "click_count": "mean",
+      "comparison": "pooled - separate",
+      "mae_difference": 0.006628765012953544,
+      "ci_low": 0.001510574776403646,
+      "ci_high": 0.011807540696649877,
+      "p_boot_le_0": 0.004
+    },
+    {
+      "model": "base_sam",
+      "click_count": 1,
+      "comparison": "pooled_13 - separate",
+      "mae_difference": 0.007759487890667223,
+      "ci_low": -0.010383272768856335,
+      "ci_high": 0.02654814142508543,
+      "p_boot_le_0": 0.2095
+    },
+    {
+      "model": "base_sam",
+      "click_count": 2,
+      "comparison": "pooled_13 - separate",
+      "mae_difference": -0.0034829315481671574,
+      "ci_low": -0.012555582538177979,
+      "ci_high": 0.0053614752859197515,
+      "p_boot_le_0": 0.7775
+    },
+    {
+      "model": "base_sam",
+      "click_count": 3,
+      "comparison": "pooled_13 - separate",
+      "mae_difference": 0.017183817583229878,
+      "ci_low": 0.0008372426396955178,
+      "ci_high": 0.03284467770820876,
+      "p_boot_le_0": 0.0155
+    },
+    {
+      "model": "base_sam",
+      "click_count": "mean",
+      "comparison": "pooled_13 - separate",
+      "mae_difference": 0.007153457975243315,
+      "ci_low": 0.001609679379100013,
+      "ci_high": 0.012451508961048545,
+      "p_boot_le_0": 0.005
+    },
+    {
+      "model": "base_sam",
+      "click_count": 1,
+      "comparison": "separate - native",
+      "mae_difference": -0.1353479457705982,
+      "ci_low": -0.20921171299797572,
+      "ci_high": -0.059362935614104315,
+      "p_boot_le_0": 0.9995
+    },
+    {
+      "model": "base_sam",
+      "click_count": 2,
+      "comparison": "separate - native",
+      "mae_difference": -0.1037528112651505,
+      "ci_low": -0.15682346324628782,
+      "ci_high": -0.04826219359138167,
+      "p_boot_le_0": 1.0
+    },
+    {
+      "model": "base_sam",
+      "click_count": 3,
+      "comparison": "separate - native",
+      "mae_difference": -0.061203151323672024,
+      "ci_low": -0.1083053091631608,
+      "ci_high": -0.015443139355355373,
+      "p_boot_le_0": 0.9945
+    },
+    {
+      "model": "base_sam",
+      "click_count": "mean",
+      "comparison": "separate - native",
+      "mae_difference": -0.10010130278647358,
+      "ci_low": -0.15354720587337425,
+      "ci_high": -0.046328193612929155,
+      "p_boot_le_0": 0.999
+    },
+    {
+      "model": "base_sam",
+      "click_count": 1,
+      "comparison": "pooled - native",
+      "mae_difference": -0.12542884201146293,
+      "ci_low": -0.18346108845310743,
+      "ci_high": -0.06624370572641326,
+      "p_boot_le_0": 1.0
+    },
+    {
+      "model": "base_sam",
+      "click_count": 2,
+      "comparison": "pooled - native",
+      "mae_difference": -0.10671768152367422,
+      "ci_low": -0.16470821344557993,
+      "ci_high": -0.04654043910049485,
+      "p_boot_le_0": 0.999
+    },
+    {
+      "model": "base_sam",
+      "click_count": 3,
+      "comparison": "pooled - native",
+      "mae_difference": -0.048271089785422897,
+      "ci_low": -0.1055199393463867,
+      "ci_high": 0.006471293642026751,
+      "p_boot_le_0": 0.954
+    },
+    {
+      "model": "base_sam",
+      "click_count": "mean",
+      "comparison": "pooled - native",
+      "mae_difference": -0.09347253777352002,
+      "ci_low": -0.14741597574418136,
+      "ci_high": -0.04078279905735134,
+      "p_boot_le_0": 0.999
+    },
+    {
+      "model": "med_sa_adapter",
+      "click_count": 1,
+      "comparison": "pooled - separate",
+      "mae_difference": -0.007030053424042409,
+      "ci_low": -0.011156163655885691,
+      "ci_high": -0.0028152375856481454,
+      "p_boot_le_0": 0.9985
+    },
+    {
+      "model": "med_sa_adapter",
+      "click_count": 2,
+      "comparison": "pooled - separate",
+      "mae_difference": -0.002907182397543332,
+      "ci_low": -0.0043141065188288,
+      "ci_high": -0.0013612970195976482,
+      "p_boot_le_0": 1.0
+    },
+    {
+      "model": "med_sa_adapter",
+      "click_count": 3,
+      "comparison": "pooled - separate",
+      "mae_difference": 0.009074394103231105,
+      "ci_low": 0.004230161434214143,
+      "ci_high": 0.013510013118450771,
+      "p_boot_le_0": 0.0
+    },
+    {
+      "model": "med_sa_adapter",
+      "click_count": "mean",
+      "comparison": "pooled - separate",
+      "mae_difference": -0.00028761390611821235,
+      "ci_low": -0.0014774525538348243,
+      "ci_high": 0.0009613290892068736,
+      "p_boot_le_0": 0.6815
+    },
+    {
+      "model": "med_sa_adapter",
+      "click_count": 1,
+      "comparison": "pooled_13 - separate",
+      "mae_difference": -0.008296565825042467,
+      "ci_low": -0.013058257762801433,
+      "ci_high": -0.003376605225205742,
+      "p_boot_le_0": 0.999
+    },
+    {
+      "model": "med_sa_adapter",
+      "click_count": 2,
+      "comparison": "pooled_13 - separate",
+      "mae_difference": -0.004411944002339427,
+      "ci_low": -0.006559368005924406,
+      "ci_high": -0.002019824515035983,
+      "p_boot_le_0": 1.0
+    },
+    {
+      "model": "med_sa_adapter",
+      "click_count": 3,
+      "comparison": "pooled_13 - separate",
+      "mae_difference": 0.007302865338984614,
+      "ci_low": 0.0033144042967176513,
+      "ci_high": 0.01100500284311877,
+      "p_boot_le_0": 0.0
+    },
+    {
+      "model": "med_sa_adapter",
+      "click_count": "mean",
+      "comparison": "pooled_13 - separate",
+      "mae_difference": -0.0018018814961324276,
+      "ci_low": -0.0033252249248309678,
+      "ci_high": -0.00020828329635980434,
+      "p_boot_le_0": 0.9875
+    },
+    {
+      "model": "med_sa_adapter",
+      "click_count": 1,
+      "comparison": "separate - native",
+      "mae_difference": 0.012447575975230583,
+      "ci_low": -0.006101748711234259,
+      "ci_high": 0.030750174045189312,
+      "p_boot_le_0": 0.0985
+    },
+    {
+      "model": "med_sa_adapter",
+      "click_count": 2,
+      "comparison": "separate - native",
+      "mae_difference": 0.0036510934391560034,
+      "ci_low": -0.012798793281373766,
+      "ci_high": 0.018604447072568378,
+      "p_boot_le_0": 0.31
+    },
+    {
+      "model": "med_sa_adapter",
+      "click_count": 3,
+      "comparison": "separate - native",
+      "mae_difference": -0.0075093284239922155,
+      "ci_low": -0.019561183419428602,
+      "ci_high": 0.004114897934000646,
+      "p_boot_le_0": 0.9055
+    },
+    {
+      "model": "med_sa_adapter",
+      "click_count": "mean",
+      "comparison": "separate - native",
+      "mae_difference": 0.00286311366346479,
+      "ci_low": -0.011021868146145138,
+      "ci_high": 0.015629900741681416,
+      "p_boot_le_0": 0.3435
+    },
+    {
+      "model": "med_sa_adapter",
+      "click_count": 1,
+      "comparison": "pooled - native",
+      "mae_difference": 0.005417522551188173,
+      "ci_low": -0.009684967882158795,
+      "ci_high": 0.020232553162284398,
+      "p_boot_le_0": 0.248
+    },
+    {
+      "model": "med_sa_adapter",
+      "click_count": 2,
+      "comparison": "pooled - native",
+      "mae_difference": 0.0007439110416126715,
+      "ci_low": -0.014459641537707459,
+      "ci_high": 0.014676561824360555,
+      "p_boot_le_0": 0.479
+    },
+    {
+      "model": "med_sa_adapter",
+      "click_count": 3,
+      "comparison": "pooled - native",
+      "mae_difference": 0.00156506567923889,
+      "ci_low": -0.014266800926012808,
+      "ci_high": 0.016599323338607124,
+      "p_boot_le_0": 0.436
+    },
+    {
+      "model": "med_sa_adapter",
+      "click_count": "mean",
+      "comparison": "pooled - native",
+      "mae_difference": 0.002575499757346577,
+      "ci_low": -0.011330981341037851,
+      "ci_high": 0.015228503057013182,
+      "p_boot_le_0": 0.349
+    }
+  ]
+}

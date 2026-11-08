@@ -57,7 +57,6 @@ from member4_analysis import evaluation_role, fit_line, read_rows, select
 from native_reliability import regression_metrics
 
 FIT_ROLE = "calibration_fit"
-VAL_ROLE = "validation"
 CORRECTIONS = ("constant", "linear", "isotonic")
 MODEL_LABELS = {"base_sam": "Original SAM", "med_sa_adapter": "Med-SA adapter"}
 
@@ -174,14 +173,13 @@ def compare_corrections(preds, own_preds, y, samples, model, target, fit_click):
 
 def evaluate_condition(rows, model, target, args, frozen, own_click):
     case_ids, q, y = select(rows, model, target, evaluation_role(rows))
-    _, qv, yv = select(rows, model, target, VAL_ROLE)
     samples = list(bootstrap_indices(
         case_ids, args.dataset_id, args.bootstrap_replicates, PROTOCOL.bootstrap_seed
     ))
     preds = {"native": q, **{name: frozen[name](q) for name in CORRECTIONS}}
     own_preds = {name: own_click[name](q) for name in CORRECTIONS}
 
-    def metric_row(method, fitted_at, prediction, validation_prediction):
+    def metric_row(method, fitted_at, prediction):
         metrics = regression_metrics(prediction, y)
         mae, bias = bootstrap_errors(prediction, y, samples)
         lo_m, hi_m = ci(mae)
@@ -194,15 +192,14 @@ def evaluate_condition(rows, model, target, args, frozen, own_click):
             "bias_ci_low": lo_b, "bias_ci_high": hi_b,
             "coarse_ece": metrics["coarse_ece"], "mean_score": metrics["mean_native_score"],
             "mean_observed_iou": metrics["mean_observed_iou"],
-            "validation_mae": float(np.abs(validation_prediction - yv).mean()),
         }
 
-    results = [metric_row("native", args.fit_click, q, qv)]
+    results = [metric_row("native", args.fit_click, q)]
     for name in CORRECTIONS:
-        results.append(metric_row(name, args.fit_click, preds[name], frozen[name](qv)))
+        results.append(metric_row(name, args.fit_click, preds[name]))
     if target != args.fit_click:
         for name in CORRECTIONS:
-            results.append(metric_row(name, target, own_preds[name], own_click[name](qv)))
+            results.append(metric_row(name, target, own_preds[name]))
     comparisons = compare_corrections(
         preds, own_preds, y, samples, model, target, args.fit_click
     )
@@ -312,8 +309,6 @@ def main():
                 "target_clicks": targets, "bootstrap_replicates": B, "seed": SEED,
                 "bootstrap_unit": bootstrap_unit(dataset_id),
                 "evaluation_case_ids": select(rows, PROTOCOL.models[0], args.fit_click, eval_role)[0],
-                "validation_role": VAL_ROLE,
-                "validation_use": "Descriptive MAE only; no selection or fitting.",
                 "uncertainty": "Bootstrap holds fitted corrections fixed.",
                 "scikit_learn_version": version("scikit-learn"),
                 "isotonic_interpolation": "Linear between thresholds; clip at endpoints.",

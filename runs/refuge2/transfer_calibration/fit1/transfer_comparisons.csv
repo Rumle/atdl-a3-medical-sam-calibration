@@ -1,49 +1,49 @@
 model,fit_click,target_click,method,comparison,difference,ci_low,ci_high,a_better,a_worse
-base_sam,1,1,constant,MAE corrected - native,-0.1929924587689607,-0.24967871307775372,-0.13610121705962522,True,False
+base_sam,1,1,constant,MAE corrected - native,-0.1911952859969221,-0.2468384968053906,-0.13511953780721506,True,False
 base_sam,1,1,constant,"GATE (beats native, and constant for linear/isotonic, at fit click)",,,,True,
-base_sam,1,1,linear,MAE corrected - native,-0.1969060463191826,-0.24921982250513358,-0.1441441347016321,True,False
-base_sam,1,1,linear,MAE corrected - constant,-0.003913587550221892,-0.01540683347449227,0.007719287009518735,False,False
+base_sam,1,1,linear,MAE corrected - native,-0.19456013201542913,-0.24575328030907423,-0.14320409609205045,True,False
+base_sam,1,1,linear,MAE corrected - constant,-0.003364846018507034,-0.01401698463942507,0.00739212705057736,False,False
 base_sam,1,1,linear,"GATE (beats native, and constant for linear/isotonic, at fit click)",,,,False,
-base_sam,1,1,isotonic,MAE corrected - native,-0.19662245769707115,-0.24622357286632737,-0.1462211130301961,True,False
-base_sam,1,1,isotonic,MAE corrected - constant,-0.003629998928110445,-0.018350973996381616,0.01104720627166976,False,False
+base_sam,1,1,isotonic,MAE corrected - native,-0.19591411826009963,-0.24396305941406796,-0.14663136669179425,True,False
+base_sam,1,1,isotonic,MAE corrected - constant,-0.0047188322631775415,-0.01831146803187074,0.009058603300049746,False,False
 base_sam,1,1,isotonic,"GATE (beats native, and constant for linear/isotonic, at fit click)",,,,False,
-base_sam,1,2,constant,MAE corrected - native,-0.11227583640098343,-0.1756326819020556,-0.04933858719126431,True,False
-base_sam,1,2,constant,transfer gap: fit-click correction - own-click correction,-0.004038783958768971,-0.01729723801858967,0.00879541643481583,False,False
-base_sam,1,2,linear,MAE corrected - native,-0.11577057014811937,-0.17394851776617515,-0.05850004817786471,True,False
-base_sam,1,2,linear,MAE corrected - constant,-0.0034947337471359363,-0.015251344070053437,0.008862652317760131,False,False
-base_sam,1,2,linear,transfer gap: fit-click correction - own-click correction,0.0004799538543739379,-0.012322587129084869,0.01239430884838532,False,False
-base_sam,1,2,isotonic,MAE corrected - native,-0.11377904662959351,-0.17312909685912653,-0.05588544593928675,True,False
-base_sam,1,2,isotonic,MAE corrected - constant,-0.0015032102286100801,-0.017236887860191438,0.014278584531061664,False,False
-base_sam,1,2,isotonic,transfer gap: fit-click correction - own-click correction,0.005371283717234471,-0.01181514792559718,0.021082168721820258,False,False
-base_sam,1,3,constant,MAE corrected - native,-0.016582724482370526,-0.08676114869571866,0.05201463971483325,False,False
-base_sam,1,3,constant,transfer gap: fit-click correction - own-click correction,0.02229250631228963,0.0069758281569907345,0.03783887963429834,False,True
-base_sam,1,3,linear,MAE corrected - native,-0.008842046140942694,-0.07425970909640796,0.054374962379417725,False,False
-base_sam,1,3,linear,MAE corrected - constant,0.007740678341427831,-0.004660513825657233,0.01931900252733674,False,False
-base_sam,1,3,linear,transfer gap: fit-click correction - own-click correction,0.028065477292091745,0.012648003163486975,0.042156427738186356,False,True
-base_sam,1,3,isotonic,MAE corrected - native,-0.0016453416560995304,-0.07009250627785794,0.06452817253284977,False,False
-base_sam,1,3,isotonic,MAE corrected - constant,0.014937382826270995,-0.0019974194700628457,0.030941524451432695,False,False
-base_sam,1,3,isotonic,transfer gap: fit-click correction - own-click correction,0.03505712241522674,0.014204196149328507,0.054096183330176684,False,True
-med_sa_adapter,1,1,constant,MAE corrected - native,-0.011038498428624421,-0.04919717426809447,0.024607023328607938,False,False
+base_sam,1,2,constant,MAE corrected - native,-0.11281890645811238,-0.17468507968359645,-0.05098295120765843,True,False
+base_sam,1,2,constant,transfer gap: fit-click correction - own-click correction,-0.007389711610525179,-0.02218771424248844,0.007319723002180616,False,False
+base_sam,1,2,linear,MAE corrected - native,-0.11778458198816638,-0.17507385636624756,-0.06155196186234653,True,False
+base_sam,1,2,linear,MAE corrected - constant,-0.004965675530054003,-0.016148689046621145,0.006557696138471902,False,False
+base_sam,1,2,linear,transfer gap: fit-click correction - own-click correction,-0.004148862423313915,-0.017538244073567424,0.008600738807180318,False,False
+base_sam,1,2,isotonic,MAE corrected - native,-0.11921790911599423,-0.17715664449793211,-0.06304743677786821,True,False
+base_sam,1,2,isotonic,MAE corrected - constant,-0.006399002657881847,-0.020766000555954667,0.008833568141208068,False,False
+base_sam,1,2,isotonic,transfer gap: fit-click correction - own-click correction,-0.0011743377176890168,-0.018044875223286894,0.014299200963307746,False,False
+base_sam,1,3,constant,MAE corrected - native,-0.019425995107795246,-0.08843275501242309,0.0479634486805324,False,False
+base_sam,1,3,constant,transfer gap: fit-click correction - own-click correction,0.023152773388336045,0.0055870732690341115,0.0406344732610222,False,True
+base_sam,1,3,linear,MAE corrected - native,-0.013247598150958217,-0.07764334771858886,0.048468868036272296,False,False
+base_sam,1,3,linear,MAE corrected - constant,0.006178396956837029,-0.005039335780898887,0.01699677726321103,False,False
+base_sam,1,3,linear,transfer gap: fit-click correction - own-click correction,0.02667619465267662,0.010240697877308828,0.04171919861555428,False,True
+base_sam,1,3,isotonic,MAE corrected - native,-0.007096796362066615,-0.07403081590900418,0.05764288570977739,False,False
+base_sam,1,3,isotonic,MAE corrected - constant,0.012329198745728631,-0.003672362826199156,0.027358174406491916,False,False
+base_sam,1,3,isotonic,transfer gap: fit-click correction - own-click correction,0.033551762086384274,0.011526363925529682,0.05326918385421343,False,True
+med_sa_adapter,1,1,constant,MAE corrected - native,-0.011109981111888073,-0.04912640641166342,0.02444940401201149,False,False
 med_sa_adapter,1,1,constant,"GATE (beats native, and constant for linear/isotonic, at fit click)",,,,False,
-med_sa_adapter,1,1,linear,MAE corrected - native,-0.01339896329507792,-0.04658830846950942,0.01757531574786987,False,False
-med_sa_adapter,1,1,linear,MAE corrected - constant,-0.002360464866453499,-0.011655066890118417,0.007583424069209421,False,False
+med_sa_adapter,1,1,linear,MAE corrected - native,-0.013331237872854895,-0.04690476617020701,0.017421823817924946,False,False
+med_sa_adapter,1,1,linear,MAE corrected - constant,-0.002221256760966822,-0.009940050055425205,0.005995074474227528,False,False
 med_sa_adapter,1,1,linear,"GATE (beats native, and constant for linear/isotonic, at fit click)",,,,False,
-med_sa_adapter,1,1,isotonic,MAE corrected - native,-0.022886087023852586,-0.057518103832618336,0.010673975629703741,False,False
-med_sa_adapter,1,1,isotonic,MAE corrected - constant,-0.011847588595228165,-0.029213114149251693,0.004616828904930215,False,False
+med_sa_adapter,1,1,isotonic,MAE corrected - native,-0.02173651923402556,-0.055576619943850644,0.011075825811503246,False,False
+med_sa_adapter,1,1,isotonic,MAE corrected - constant,-0.010626538122137485,-0.025704116535054413,0.003908653822529036,False,False
 med_sa_adapter,1,1,isotonic,"GATE (beats native, and constant for linear/isotonic, at fit click)",,,,False,
-med_sa_adapter,1,2,constant,MAE corrected - native,0.07756585289137588,0.03660957725233107,0.11635355879463526,False,True
-med_sa_adapter,1,2,constant,transfer gap: fit-click correction - own-click correction,0.0615295343203581,0.031887158984762576,0.09024091758566218,False,True
-med_sa_adapter,1,2,linear,MAE corrected - native,0.0558739508067225,0.02101868647095703,0.08874635089731807,False,True
-med_sa_adapter,1,2,linear,MAE corrected - constant,-0.02169190208465338,-0.0313230757154692,-0.011316833791570209,True,False
-med_sa_adapter,1,2,linear,transfer gap: fit-click correction - own-click correction,0.05608068523720078,0.031434808253512775,0.07979655219794499,False,True
-med_sa_adapter,1,2,isotonic,MAE corrected - native,0.022451523455256,-0.007472298345304521,0.054428067684074884,False,False
-med_sa_adapter,1,2,isotonic,MAE corrected - constant,-0.05511432943611988,-0.08234160806031361,-0.02796612431334425,True,False
-med_sa_adapter,1,2,isotonic,transfer gap: fit-click correction - own-click correction,0.025655976692663368,0.0036967197205310174,0.048022927071989706,False,True
-med_sa_adapter,1,3,constant,MAE corrected - native,0.166256756456999,0.13278236097940213,0.19788410335702006,False,True
-med_sa_adapter,1,3,constant,transfer gap: fit-click correction - own-click correction,0.16155448020741042,0.1335097470949451,0.18862070214853588,False,True
-med_sa_adapter,1,3,linear,MAE corrected - native,0.12829846653314353,0.09925920965578607,0.1548943734646237,False,True
-med_sa_adapter,1,3,linear,MAE corrected - constant,-0.03795828992385544,-0.04694668031914696,-0.027865190966230132,True,False
-med_sa_adapter,1,3,linear,transfer gap: fit-click correction - own-click correction,0.1322165225219685,0.10534517798374023,0.15696187431409092,False,True
-med_sa_adapter,1,3,isotonic,MAE corrected - native,0.07139212557796644,0.046214402287834994,0.09936113720374837,False,True
-med_sa_adapter,1,3,isotonic,MAE corrected - constant,-0.09486463087903255,-0.12343688836045372,-0.06678733789043008,True,False
-med_sa_adapter,1,3,isotonic,transfer gap: fit-click correction - own-click correction,0.07214880951028041,0.049845930277408,0.09595150273124539,False,True
+med_sa_adapter,1,2,constant,MAE corrected - native,0.07720843947505757,0.03636653612923457,0.11592359045480431,False,True
+med_sa_adapter,1,2,constant,transfer gap: fit-click correction - own-click correction,0.05978408395901047,0.03118287775886045,0.08728146981674403,False,True
+med_sa_adapter,1,2,linear,MAE corrected - native,0.05853276833858517,0.022842477113097167,0.0922000404960112,False,True
+med_sa_adapter,1,2,linear,MAE corrected - constant,-0.018675671136472394,-0.026612932713932388,-0.010183877046926061,True,False
+med_sa_adapter,1,2,linear,transfer gap: fit-click correction - own-click correction,0.055609597710379266,0.031487165494487816,0.07882822863754228,False,True
+med_sa_adapter,1,2,isotonic,MAE corrected - native,0.031020240216210887,2.1233071121330818e-05,0.06306456357879212,False,True
+med_sa_adapter,1,2,isotonic,MAE corrected - constant,-0.04618819925884668,-0.06982765028385496,-0.023175372351266404,True,False
+med_sa_adapter,1,2,isotonic,transfer gap: fit-click correction - own-click correction,0.0329131776875288,0.012250273632297654,0.05267272588308603,False,True
+med_sa_adapter,1,3,constant,MAE corrected - native,0.1656277088442788,0.13215402819351457,0.19722753491124337,False,True
+med_sa_adapter,1,3,constant,transfer gap: fit-click correction - own-click correction,0.15713082584984572,0.13051937515196266,0.18296403349024795,False,True
+med_sa_adapter,1,3,linear,MAE corrected - native,0.13325177450067932,0.1035821682193426,0.1604508809448483,False,True
+med_sa_adapter,1,3,linear,MAE corrected - constant,-0.03237593434359945,-0.03980434256980957,-0.024043427978090056,True,False
+med_sa_adapter,1,3,linear,transfer gap: fit-click correction - own-click correction,0.13341098685001213,0.1075764167656139,0.15721577616104765,False,True
+med_sa_adapter,1,3,isotonic,MAE corrected - native,0.08492844502843251,0.05952558191117545,0.11215080744486224,False,True
+med_sa_adapter,1,3,isotonic,MAE corrected - constant,-0.08069926381584627,-0.10443889300656434,-0.05647891577545145,True,False
+med_sa_adapter,1,3,isotonic,transfer gap: fit-click correction - own-click correction,0.0846877142980286,0.06341883161559715,0.1072053050068919,False,True

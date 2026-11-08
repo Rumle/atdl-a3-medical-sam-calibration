@@ -3,8 +3,8 @@
   "dataset_id": "papila",
   "dataset_split": "PAPILA 488 eyes, split by patient",
   "sample_count": 488,
-  "inference_new_count": 0,
-  "inference_reused_count": 488,
+  "inference_new_count": 488,
+  "inference_reused_count": 0,
   "case_role_ids": {
     "calibration_fit": [
       "RET180OD",
@@ -250,9 +250,7 @@
       "RET106OD",
       "RET106OS",
       "RET133OD",
-      "RET133OS"
-    ],
-    "validation": [
+      "RET133OS",
       "RET046OD",
       "RET046OS",
       "RET136OD",
@@ -1480,491 +1478,491 @@
     },
     "RET046OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET046OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET136OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET136OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET192OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET192OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET217OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET217OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET129OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET129OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET179OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET179OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET254OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET254OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET150OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET150OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET193OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET193OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET104OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET104OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET140OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET140OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET153OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET153OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET256OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET256OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET275OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET275OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET024OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET024OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET253OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET253OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET035OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET035OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET186OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET186OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET184OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET184OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET268OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET268OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET266OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET266OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET044OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET044OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET236OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET236OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET238OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET238OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET195OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET195OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET108OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET108OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET183OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET183OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET274OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET274OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET187OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET187OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET211OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET211OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET074OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET074OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET128OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET128OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET244OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET244OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET057OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET057OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET258OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET258OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET171OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET171OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET292OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET292OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET227OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET227OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET229OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET229OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET259OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET259OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET087OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET087OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET155OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET155OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET250OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET250OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET218OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET218OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET091OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET091OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET281OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET281OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET131OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET131OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET230OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET230OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET021OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET021OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET048OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET048OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET241OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET241OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET277OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET277OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET280OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET280OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET164OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET164OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET077OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET077OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET235OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET235OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET130OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET130OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET006OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET006OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET121OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET121OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET228OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET228OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET089OD": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET089OS": {
       "source_pool": "all_488",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "RET224OD": {
       "source_pool": "all_488",
@@ -2456,27 +2454,35 @@
     }
   },
   "role_counts": {
-    "calibration_fit": 244,
-    "validation": 122,
+    "calibration_fit": 366,
     "final_test": 122
   },
-  "calibration_count": 244,
-  "validation_count": 122,
+  "calibration_count": 366,
   "evaluation_role": "final_test",
   "evaluation_count": 122,
   "sampling_seed": 1,
   "partition_seed": 1,
   "model_seed": 1,
   "ground_truth": "Fill expert 1's optic-disc outline to make a mask at the original image size.",
-  "gpu": "not used (predictions cached)",
+  "gpu": "NVIDIA GeForce RTX 5080",
   "measurements": {
     "base_sam": {
-      "images": 0,
-      "inference_seconds": 0.0
+      "inference_seconds": 59.56803007889539,
+      "images": 488,
+      "seconds_per_image": 0.12206563540757252,
+      "base_state_keys_loaded": 314,
+      "adapter_state_keys_loaded": 0,
+      "peak_cuda_allocated_bytes": 2925236736,
+      "peak_cuda_reserved_bytes": 3261071360
     },
     "med_sa_adapter": {
-      "images": 0,
-      "inference_seconds": 0.0
+      "inference_seconds": 61.834142186213285,
+      "images": 488,
+      "seconds_per_image": 0.1267093077586338,
+      "base_state_keys_loaded": 314,
+      "adapter_state_keys_loaded": 144,
+      "peak_cuda_allocated_bytes": 2967851520,
+      "peak_cuda_reserved_bytes": 3311403008
     }
   },
   "prompt_rule": "Choose positive clicks from the consensus mask. The first click is the foreground pixel farthest from the boundary. Each later click is the remaining foreground pixel farthest from the earlier clicks. Smaller prompts use the first points of the three-click prompt.",

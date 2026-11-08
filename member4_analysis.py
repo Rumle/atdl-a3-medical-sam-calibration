@@ -153,7 +153,6 @@ def analyze(rows, output, replicates=2000, seed=1):
     (output/'analysis_settings.json').write_text(json.dumps({
         'fit_role': 'calibration_fit', 'evaluation_role': eval_role,
         'method': 'OLS on clipped native score, then clip output to [0,1]',
-        'validation': 'Not used: method fixed in advance; no model selection performed',
         'mean_baseline': 'Mean actual IoU of the source click-count calibration cases',
         'bootstrap_replicates': replicates, 'bootstrap_seed': seed,
         'bootstrap_unit': bootstrap_unit(dataset_id),

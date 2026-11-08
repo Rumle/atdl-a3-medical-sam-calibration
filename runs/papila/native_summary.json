@@ -2,8 +2,7 @@
   "dataset_id": "papila",
   "dataset_split": "PAPILA 488 eyes, split by patient",
   "sample_count": 488,
-  "calibration_count": 244,
-  "validation_count": 122,
+  "calibration_count": 366,
   "evaluation_role": "final_test",
   "evaluation_cases": 122,
   "evaluation_case_ids": [
@@ -134,15 +133,25 @@
   "sampling_seed": 1,
   "partition_seed": 1,
   "ground_truth": "Fill expert 1's optic-disc outline to make a mask at the original image size.",
-  "gpu": "not used (predictions cached)",
+  "gpu": "NVIDIA GeForce RTX 5080",
   "inference_measurements": {
     "base_sam": {
-      "images": 0,
-      "inference_seconds": 0.0
+      "inference_seconds": 59.56803007889539,
+      "images": 488,
+      "seconds_per_image": 0.12206563540757252,
+      "base_state_keys_loaded": 314,
+      "adapter_state_keys_loaded": 0,
+      "peak_cuda_allocated_bytes": 2925236736,
+      "peak_cuda_reserved_bytes": 3261071360
     },
     "med_sa_adapter": {
-      "images": 0,
-      "inference_seconds": 0.0
+      "inference_seconds": 61.834142186213285,
+      "images": 488,
+      "seconds_per_image": 0.1267093077586338,
+      "base_state_keys_loaded": 314,
+      "adapter_state_keys_loaded": 144,
+      "peak_cuda_allocated_bytes": 2967851520,
+      "peak_cuda_reserved_bytes": 3311403008
     }
   },
   "adapter_exposure_status": "unknown",
@@ -251,6 +260,6 @@
     "bias": "Mean of the clipped native score minus observed IoU. A positive value means the native score is too high on average.",
     "coarse_ece": "The metric uses 10 equal-width bins over [0, 1]. It reports the weighted absolute gap between mean score and mean observed IoU.",
     "confidence_intervals": "We calculate 95% percentile intervals for MAE and signed bias with 2000 patient-level bootstrap samples and seed 1.",
-    "roles": "We calculate metrics on final_test cases when available. Otherwise, we use internal_evaluation_overlap_risk cases and exclude calibration-fit and validation cases."
+    "roles": "We calculate metrics on final_test cases when available. Otherwise, we use internal_evaluation_overlap_risk cases and exclude calibration-fit cases."
   }
 }

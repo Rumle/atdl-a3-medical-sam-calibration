@@ -206,9 +206,7 @@
       "0645",
       "0670",
       "0799",
-      "0625"
-    ],
-    "validation": [
+      "0625",
       "0693",
       "0484",
       "0549",
@@ -1216,403 +1214,403 @@
     },
     "0693": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0484": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0549": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0736": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0543": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0475": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0750": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0442": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0563": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0698": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0456": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0688": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0643": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0665": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0425": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0585": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0647": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0452": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0792": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0472": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0700": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0638": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0704": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0795": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0821": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "1281": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0426": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0595": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0801": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0552": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0460": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0464": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0556": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0612": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0623": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0483": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0605": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0779": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0675": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0813": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0604": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0715": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0742": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0655": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0588": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0590": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0765": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0723": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0455": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0592": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0550": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0496": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0746": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0448": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0599": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0722": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0686": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0479": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0824": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0527": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0465": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0571": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0755": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0669": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0507": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0587": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0748": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0561": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0516": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0818": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0489": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0745": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0443": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0432": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0663": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0538": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0537": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0536": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0666": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0610": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0613": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0446": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0577": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0757": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0791": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0477": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0440": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0575": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0640": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0504": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0436": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0635": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0617": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0711": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0485": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0808": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0502": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0807": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0634": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0522": {
       "source_pool": "test_400",
-      "analysis_role": "validation"
+      "analysis_role": "calibration_fit"
     },
     "0495": {
       "source_pool": "test_400",
@@ -2016,33 +2014,31 @@
     }
   },
   "role_counts": {
-    "calibration_fit": 200,
-    "validation": 100,
+    "calibration_fit": 300,
     "internal_evaluation_overlap_risk": 100
   },
-  "calibration_count": 200,
-  "validation_count": 100,
+  "calibration_count": 300,
   "evaluation_role": "internal_evaluation_overlap_risk",
   "evaluation_count": 100,
   "sampling_seed": 1,
   "partition_seed": 1,
   "model_seed": 1,
-  "ground_truth": "Pixelwise majority vote from seven raters. Mark a pixel as foreground when at least four raters do.",
-  "gpu": "NVIDIA A100-PCIE-40GB",
+  "ground_truth": "Use the seven rater masks. A pixel belongs to the optic disc when at least four raters include it.",
+  "gpu": "NVIDIA GeForce RTX 5080",
   "measurements": {
     "base_sam": {
-      "inference_seconds": 107.77326766902115,
+      "inference_seconds": 45.07950905198231,
       "images": 400,
-      "seconds_per_image": 0.2694331691725529,
+      "seconds_per_image": 0.11269877262995578,
       "base_state_keys_loaded": 314,
       "adapter_state_keys_loaded": 0,
       "peak_cuda_allocated_bytes": 2928370176,
       "peak_cuda_reserved_bytes": 3282042880
     },
     "med_sa_adapter": {
-      "inference_seconds": 107.61920704692602,
+      "inference_seconds": 46.610928741050884,
       "images": 400,
-      "seconds_per_image": 0.26904801761731506,
+      "seconds_per_image": 0.11652732185262721,
       "base_state_keys_loaded": 314,
       "adapter_state_keys_loaded": 144,
       "peak_cuda_allocated_bytes": 2971640320,

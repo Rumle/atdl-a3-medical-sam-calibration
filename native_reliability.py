@@ -396,7 +396,6 @@ def analyze_predictions(
         "dataset_split": run_summary.get("dataset_split"),
         "sample_count": run_summary.get("sample_count"),
         "calibration_count": run_summary.get("calibration_count"),
-        "validation_count": run_summary.get("validation_count", 0),
         "evaluation_role": evaluation_role,
         "evaluation_cases": len(evaluation_case_ids),
         "evaluation_case_ids": evaluation_case_ids,
@@ -433,7 +432,7 @@ def analyze_predictions(
             "roles": (
                 "We calculate metrics on final_test cases when available. "
                 "Otherwise, we use internal_evaluation_overlap_risk cases and "
-                "exclude calibration-fit and validation cases."
+                "exclude calibration-fit cases."
             ),
         },
     }
