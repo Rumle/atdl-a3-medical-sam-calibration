@@ -1,0 +1,17 @@
+model,method,fit_click_count,slope_a,intercept_b,fit_cases
+base_sam,separate,1,-0.224234,0.484934,200
+base_sam,separate,2,0.171479,0.321739,200
+base_sam,separate,3,0.204285,0.33707,200
+base_sam,pooled,all,0.0618662,0.375852,200
+base_sam,pooled_13,"1,3",0.00518085,0.404286,200
+base_sam,shared_slope,1,0.032585,0.301687,200
+base_sam,shared_slope,2,0.032585,0.423708,200
+base_sam,shared_slope,3,0.032585,0.46665,200
+med_sa_adapter,separate,1,0.436915,0.381719,200
+med_sa_adapter,separate,2,0.533855,0.300885,200
+med_sa_adapter,separate,3,0.646383,0.238,200
+med_sa_adapter,pooled,all,0.521691,0.324178,200
+med_sa_adapter,pooled_13,"1,3",0.526141,0.327189,200
+med_sa_adapter,shared_slope,1,0.503573,0.331148,200
+med_sa_adapter,shared_slope,2,0.503573,0.326049,200
+med_sa_adapter,shared_slope,3,0.503573,0.35956,200
