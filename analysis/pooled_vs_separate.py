@@ -8,7 +8,7 @@ Both use the same calibration cases (same annotation budget). Extra controls:
   pooled_13:      pooled fit on 1 and 3 clicks only (excludes 2 clicks)
   shared_slope:   y_hat = clip(a q + b_k, 0, 1), one slope for all click counts, one intercept per k
   constant:       calibration-set mean IoU at click count k
-Validation cases are not used. Evaluation uses final_test when present, otherwise
+No validation pool is used. Evaluation uses final_test when present, otherwise
 internal_evaluation_overlap_risk.
 """
 
@@ -20,10 +20,10 @@ from pathlib import Path
 import numpy as np
 
 from experiment_protocol import PROTOCOL
-from bootstrap import bootstrap_indices, bootstrap_unit, dataset_id_from_rows
-from member4_analysis import evaluation_role
-from native_reliability import regression_metrics
-from figure_plotting import plot_pooled_metrics
+from analysis.bootstrap import bootstrap_indices, bootstrap_unit, dataset_id_from_rows
+from analysis.member4_analysis import evaluation_role
+from analysis.native_reliability import regression_metrics
+from analysis.figure_plotting import plot_pooled_metrics
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--dataset-id", default="refuge2")
@@ -31,8 +31,8 @@ parser.add_argument("--run-dir", type=Path)
 parser.add_argument("--matched-draws", type=int, default=200)
 args = parser.parse_args()
 
-script_dir = Path(__file__).resolve().parent
-run_dir = args.run_dir if args.run_dir else script_dir / "runs" / args.dataset_id
+project_dir = Path(__file__).resolve().parents[1]
+run_dir = args.run_dir if args.run_dir else project_dir / "runs" / args.dataset_id
 out_dir = run_dir / "pooled_vs_separate"
 out_dir.mkdir(parents=True, exist_ok=True)
 MODELS, CLICKS = PROTOCOL.models, PROTOCOL.click_counts

@@ -25,7 +25,7 @@ from dataset_io import (
     load_dataset_case,
     prepare_dataset,
 )
-from native_reliability import analyze_predictions
+from analysis.native_reliability import analyze_predictions
 from shared_inference import (
     UPSTREAM_DIR,
     run_model,
@@ -59,6 +59,10 @@ def _hash_case_inputs(
         )
     serialized = json.dumps(inputs, sort_keys=True, separators=(",", ":"))
     return hashlib.sha256(serialized.encode()).hexdigest()
+
+
+def select_inference_device() -> torch.device:
+    return torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 
 def _upstream_source_hash() -> str:
@@ -384,12 +388,7 @@ def write_shared_predictions(
     output_dir.mkdir(parents=True, exist_ok=True)
     measurements = {}
     if sampled_cases:
-        device = torch.device("cuda:0")
-        if not torch.cuda.is_available():
-            raise RuntimeError(
-                "CUDA is required for the shared SAM and Med-SA inference."
-            )
-
+        device = select_inference_device()
         predictions = {}
         for model_name in PROTOCOL.models:
             predictions[model_name], measurements[model_name] = run_model(
@@ -439,6 +438,8 @@ def write_shared_predictions(
         "ground_truth": dataset_protocol.ground_truth_rule,
         "gpu": (
             torch.cuda.get_device_name(device)
+            if sampled_cases and device.type == "cuda"
+            else "CPU"
             if sampled_cases
             else "not used (predictions cached)"
         ),
@@ -562,27 +563,30 @@ def main() -> None:
     )
     subprocess.run(
         [
-            sys.executable, str(PROJECT_DIR / "member4_analysis.py"),
+            sys.executable, "-m", "analysis.member4_analysis",
             "--alternative", str(run_dir / "shared_case_results.csv"),
             "--output-dir", str(run_dir / "member4_analysis"),
         ],
         check=True,
+        cwd=PROJECT_DIR,
     )
     subprocess.run(
         [
-            sys.executable, str(PROJECT_DIR / "pooled_vs_separate.py"),
+            sys.executable, "-m", "analysis.pooled_vs_separate",
             "--dataset-id", args.dataset_id, "--run-dir", str(run_dir),
         ],
         check=True,
+        cwd=PROJECT_DIR,
     )
     subprocess.run(
         [
-            sys.executable, str(PROJECT_DIR / "transfer_calibration.py"),
+            sys.executable, "-m", "analysis.transfer_calibration",
             "--dataset-id", args.dataset_id,
             "--results-csv", str(run_dir / "shared_case_results.csv"),
             "--out-dir", str(run_dir / "transfer_calibration" / "fit1"),
         ],
         check=True,
+        cwd=PROJECT_DIR,
     )
     for row in result["metrics"]:
         print(

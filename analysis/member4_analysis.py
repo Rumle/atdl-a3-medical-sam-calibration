@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 
 import numpy as np
-from bootstrap import bootstrap_indices, bootstrap_unit, dataset_id_from_rows
+from analysis.bootstrap import bootstrap_indices, bootstrap_unit, dataset_id_from_rows
 
 MODELS = ('base_sam', 'med_sa_adapter')
 CLICKS = (1, 2, 3)

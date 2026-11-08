@@ -10,8 +10,6 @@ plus the native score q as the uncorrected reference.
 
 Steps
   1. FIT   every correction on `calibration_fit` cases at --fit-click only. Nothing is tuned.
-           Validation cases are not used to select anything (all methods are reported); they are
-           only reported as a sanity column.
   2. FREEZE the fitted corrections. They are never refitted after this point.
   3. TEST   each frozen correction, unchanged, on the dataset's evaluation cases at
            every click count in --clicks.
@@ -31,10 +29,10 @@ REFUGE evaluation may overlap checkpoint development. Other datasets have unknow
 PAPILA confidence intervals resample patients and include both eyes.
 
 Run from the repository root:
-    python transfer_calibration.py                       # fit at 1 click, test at 1, 2, 3
-    python transfer_calibration.py --fit-click 3 --clicks 1 2 3
+    python -m analysis.transfer_calibration
+    python -m analysis.transfer_calibration --fit-click 3 --clicks 1 2 3
 Outputs go to runs/<dataset-id>/transfer_calibration/fit<k>/ so runs do not overwrite each other.
-Needs scikit-learn for isotonic regression (pip install scikit-learn).
+Scikit-learn is required for isotonic regression and is installed from requirements.txt.
 """
 
 import argparse
@@ -51,11 +49,11 @@ import numpy as np
 
 from sklearn.isotonic import IsotonicRegression
 
-from bootstrap import bootstrap_indices, bootstrap_unit, dataset_id_from_rows
+from analysis.bootstrap import bootstrap_indices, bootstrap_unit, dataset_id_from_rows
 from experiment_protocol import DATASET_PROTOCOLS, PROTOCOL
-from member4_analysis import evaluation_role, fit_line, read_rows, select
-from native_reliability import regression_metrics
-from figure_plotting import save_report_figure
+from analysis.member4_analysis import evaluation_role, fit_line, read_rows, select
+from analysis.native_reliability import regression_metrics
+from analysis.figure_plotting import save_report_figure
 
 FIT_ROLE = "calibration_fit"
 CORRECTIONS = ("constant", "linear", "isotonic")
@@ -278,7 +276,7 @@ def main():
     if args.bootstrap_replicates < 1 or args.min_bin_count < 1:
         parser.error("bootstrap-replicates and min-bin-count must be positive")
 
-    run_dir = Path(__file__).resolve().parent / "runs" / args.dataset_id
+    run_dir = Path(__file__).resolve().parents[1] / "runs" / args.dataset_id
     out_dir = Path(args.out_dir) if args.out_dir else run_dir / "transfer_calibration" / f"fit{args.fit_click}"
     B, SEED = args.bootstrap_replicates, PROTOCOL.bootstrap_seed
     rows = read_rows(args.results_csv or run_dir / "shared_case_results.csv")

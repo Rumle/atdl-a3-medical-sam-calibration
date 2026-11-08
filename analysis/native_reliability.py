@@ -7,8 +7,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from experiment_protocol import PROTOCOL
-from bootstrap import bootstrap_indices, bootstrap_unit, dataset_id_from_rows
-from figure_plotting import save_report_figure
+from analysis.bootstrap import bootstrap_indices, bootstrap_unit, dataset_id_from_rows
+from analysis.figure_plotting import save_report_figure
 
 
 MODELS = ("base_sam", "med_sa_adapter")
